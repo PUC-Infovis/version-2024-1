@@ -1,0 +1,481 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto&display=swap");
+
+/* principal: #f92696; */
+
+
+/* secundario: #2696f9; */
+
+
+/* sec dark: #066fcd */
+
+html[data-theme="light"] {
+    --fondo: white;
+    --texto: black;
+    --primario: #ef6c00;
+    --secundario: #009668;
+    --secundario-enfasis: #ce93d8;
+}
+
+html,
+html[data-theme="dark"] {
+    --fondo: #282c35;
+    --texto: white;
+    --primario: #e97e26;
+    --secundario: #0dad7d;
+    --secundario-enfasis: #ce93d8;
+}
+
+
+strong,
+strong code {
+    color: var(--primario);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: var(--texto);
+    background-color: var(--fondo);
+    margin: 0 auto;
+    line-height: 1.8em;
+    -webkit-font-smoothing: antialiased;
+    max-width: 900px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Fira Sans', sans-serif;
+    line-height: 1.3;
+    font-weight: bold;
+    color: var(--primario);
+}
+
+h1,
+h2,
+h3 {
+    display: block;
+}
+
+h1 {
+    font-size: 30px
+}
+
+h2 {
+    font-size: 24px
+}
+
+h3 {
+    margin-top: 50px;
+    font-size: 18px
+}
+
+h4,
+h5,
+h6 {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+    color: var(--texto);
+}
+
+#mode-toggle-div {
+    float: right;
+    color: var(--texto);
+    background: var(--fondo);
+    cursor: pointer;
+}
+
+#mode-toggle-div:hover {
+    color: var(--secundario-enfasis);
+}
+
+.header {
+    padding: 2% 5% 2% 5%;
+    -webkit-font-smoothing: antialiased
+}
+
+.header h2 {
+    color: var(--texto);
+}
+
+.header .pages-links {
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.header .pages-links a {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 2px solid var(--primario);
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Fira Sans', sans-serif;
+    color: var(--texto);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.header .pages-links a.current-page {
+    border: 2px solid var(--secundario);
+}
+
+.header .pages-links a:hover {
+    border: 2px solid var(--secundario-enfasis);
+}
+
+em {
+    font-style: italic
+}
+
+strong {
+    font-weight: 700
+}
+
+ul {
+    list-style-position: inside;
+    list-style: disc;
+    padding-left: 25px
+}
+
+ol {
+    list-style-position: inside;
+    list-style: decimal;
+    padding-left: 25px
+}
+
+blockquote {
+    margin: 0;
+    padding: 0 0 0 20px;
+    font-style: italic
+}
+
+dl,
+dt,
+dd,
+dl p {
+    color: #444
+}
+
+dl dt {
+    font-weight: bold
+}
+
+dl dd {
+    padding-left: 20px;
+    font-style: italic
+}
+
+dl p {
+    padding-left: 20px;
+    font-style: italic
+}
+
+hr {
+    border: 0;
+    background: #ccc;
+    height: 1px;
+    margin: 0 0 24px
+}
+
+img {
+    position: relative;
+    margin: 0 auto;
+    max-width: 650px;
+    padding: 5px;
+    margin: 10px 0 32px 0;
+    border: 1px solid #ccc
+}
+
+p img,
+.emoji {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    text-align: center;
+    border: none
+}
+
+code,
+pre {
+    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+    color: #000;
+    font-size: 14px
+}
+
+pre {
+    padding: 4px 12px;
+    background: #FDFEFB;
+    border-radius: 4px;
+    border: 1px solid #D7D8C8;
+    overflow: auto;
+    overflow-y: hidden;
+    margin-bottom: 32px
+}
+
+table {
+    width: 100%
+}
+
+td {
+    padding: 10px;
+    /* background: #ccc */
+}
+
+p.header {
+    font-size: 16px
+}
+
+h1.header {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1.3em;
+    margin-top: 0
+}
+
+h1.header,
+a.header,
+a.name,
+header a {
+    color: var(--texto);
+}
+
+a.header {
+    text-decoration: underline
+}
+
+a.name {
+    white-space: nowrap
+}
+
+.header tr {
+    list-style: none;
+    padding: 0
+}
+
+.header th {
+    list-style-type: none;
+    width: 132px;
+    height: 15px;
+    margin-bottom: 12px;
+    line-height: 1em;
+    padding: 6px 6px 6px 7px;
+    border-radius: 4px;
+    border: 2px solid var(--primario);
+}
+
+.header th a {
+    display: block;
+}
+
+a.buttons {
+    -webkit-font-smoothing: antialiased;
+    background: url(../images/arrow-down.png) no-repeat;
+    font-weight: normal;
+    padding: 2px 2px 2px 22px;
+    height: 30px
+}
+
+a.github {
+    background: url(../images/octocat-small.png) no-repeat 1px
+}
+
+a.buttons:hover {
+    color: var(--texto);
+    text-decoration: none
+}
+
+section {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+footer {
+    width: 170px;
+    float: left;
+    position: fixed;
+    bottom: 10px;
+    padding-left: 50px
+}
+
+a {
+    color: var(--secundario);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color .15s ease;
+}
+
+a:hover {
+    color: var(--secundario-enfasis);
+    text-shadow: none;
+    border: none;
+}
+
+@media print,
+screen and (max-width: 960px) {
+    div.wrapper {
+        width: auto;
+        margin: 0
+    }
+
+    .header,
+    section,
+    footer {
+        float: none;
+        position: static;
+        width: auto
+    }
+
+    footer {
+        /* border-top: 1px solid #ccc; */
+        margin: 0 84px 0 50px;
+        padding: 0
+    }
+
+    .header {
+        padding-right: 320px
+    }
+
+    section {
+        padding: 20px 84px 20px 50px;
+        margin: 0 0 20px
+    }
+
+    .header a small {
+        display: inline
+    }
+
+    .header ul {
+        position: absolute;
+        right: 130px;
+        top: 84px
+    }
+}
+
+@media print,
+screen and (max-width: 720px) {
+    body {
+        word-wrap: break-word
+    }
+
+    .header {
+        padding: 10px 20px 0;
+        margin-right: 0
+    }
+
+    section {
+        padding: 10px 0 10px 20px;
+        margin: 0 0 30px
+    }
+
+    footer {
+        margin: 0 0 0 30px
+    }
+
+    .header ul,
+    .header p.view {
+        position: static
+    }
+
+    th {
+        font-size: 15px;
+    }
+}
+
+@media print,
+screen and (max-width: 480px) {
+    .header ul li.download {
+        display: none
+    }
+
+    footer {
+        margin: 0 0 0 20px
+    }
+
+    footer a {
+        display: block
+    }
+
+    th {
+        font-size: 15px;
+    }
+}
+
+@media print {
+    body {
+        padding: 0.4in;
+        font-size: 12pt;
+    }
+}
+
+
+/* Switch */
+
+.switch {
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 13px;
+}
+
+.switch div {
+    position: relative;
+    display: block;
+    background: #eee;
+    width: 35px;
+    height: 20px;
+    border-radius: 50px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.fa-adjust {
+    transform: rotate(180deg);
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #999;
+    transition: 0.4s;
+    border-radius: 34px;
+    height: 14px;
+    width: 14px;
+    display: inline-block;
+    position: relative;
+}
+
+input:checked+.slider {
+    transform: translateX(12px);
+}
+
+/* Salon de la fama */
+
+.cards-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.rol-card {
+    text-align: center;
+    border-radius: 50px;
+    border: 1px solid var(--secundario);
+    margin: 10px;
+    padding: 30px;
+    width: 150px;
+}
+
+.rol-card h3{
+    margin-top: 0px;
+}

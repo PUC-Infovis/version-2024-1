@@ -1,0 +1,21 @@
+<div class="header">
+    <label class="switch" id="mode-toggle-div">
+        <div>
+            <input id="mode-toggle" type="checkbox" onclick="cambioDeModo()"/>
+            <span class="slider round"></span>
+        </div>
+        <span id="mode-toggle-text">Modo Claro</span>
+    </label>
+    <!-- <button id="mode-toggle" onclick="cambioDeModo()">Modo oscuro</button> -->
+    <h1><a href="https://puc-infovis.github.io/">Visualización de Información</a> 📈 👀 </h1>
+    <h2> PUC Chile / IIC2026 / Segundo Semestre 2023 </h2> 
+    <br>
+    <div class="pages-links">
+        {% for p in site.pages %}
+            {% if p.title %}
+                <a {% if page.url == p.url %} class="current-page" {% endif %} href= /version-2024-1{{ p.url }} >{{ p.title }}</a>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+</div>
