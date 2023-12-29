@@ -14,8 +14,6 @@ Todo material del curso (PDF de clases, códigos y ayudantías) estará disponib
 
 A continuación podrás observar un _spreadsheet_ con la planificación ideal del curso (contenidos, fechas de evaluaciones, etc.). Esta planificación se puede ver alterada si ocurren eventos de fuerza mayor que atrasen algún contenido y/o evalaución.
 
-Espere un poco que está cargando la planificación...
-
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRIShAEy95eHVvVz7KRN4HVhdBLRs1LlzZq7DVEWxppnaeecjN0r-TAX1o84mBhQBQK1yMEmSM5BJvo/pubhtml?widget=true&amp;headers=false"  style="border: 0" width="100%" height="450"></iframe>
 
 
@@ -30,4 +28,5 @@ Tambien puedes acceder a la planificación en el siguiente enlace: [Enlace](http
 ### Actualizaciones del sitio
 
 
-- **(13/07/2023)** Creación del sitio.
+- **(29/12/2023)** Agregar ruta de aprendizaje y programa
+- **(15/12/2023)** Creación del sitio.
