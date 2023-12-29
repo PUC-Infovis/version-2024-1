@@ -16,10 +16,10 @@ A continuación podrás observar un _spreadsheet_ con la planificación ideal de
 
 Espere un poco que está cargando la planificación...
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS5gIBKUm1E-oKmuMecvVQTiVraVVdmggyJUmYUo-MRkds5qHjT0Q4C9vWoV-lPsiJMd6vEXFWCJljp/pubhtml?gid=259351838&amp;single=true&amp;widget=true&amp;headers=false" style="border: 0" width="100%" height="450"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRIShAEy95eHVvVz7KRN4HVhdBLRs1LlzZq7DVEWxppnaeecjN0r-TAX1o84mBhQBQK1yMEmSM5BJvo/pubhtml?widget=true&amp;headers=false"  style="border: 0" width="100%" height="450"></iframe>
 
 
-Tambien puedes acceder a la planificación en el siguiente enlace: [Enlace](https://docs.google.com/spreadsheets/d/e/2PACX-1vS5gIBKUm1E-oKmuMecvVQTiVraVVdmggyJUmYUo-MRkds5qHjT0Q4C9vWoV-lPsiJMd6vEXFWCJljp/pubhtml?gid=259351838&single=true)
+Tambien puedes acceder a la planificación en el siguiente enlace: [Enlace](https://docs.google.com/spreadsheets/d/e/2PACX-1vRIShAEy95eHVvVz7KRN4HVhdBLRs1LlzZq7DVEWxppnaeecjN0r-TAX1o84mBhQBQK1yMEmSM5BJvo/pubhtml)
 
 
 ## Equipo Docente
