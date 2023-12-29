@@ -10,7 +10,7 @@ En este sitio podrás acceder a todo el material del curso e links de ínteres, 
 
 Todo material del curso (PDF de clases, códigos y ayudantías) estará disponible en el [Syllabus del curso](https://github.com/PUC-Infovis/Syllabus-2024-1). Las dudas del curso serán resueltas en la parte de [_Discussions_ del Syllabus](https://github.com/PUC-Infovis/Syllabus-2024-1/discussions).
 
-## Ruta de Aprendizaje
+## Ruta de Aprendizaje
 
 A continuación podrás observar un _spreadsheet_ con la planificación ideal del curso (contenidos, fechas de evaluaciones, etc.). Esta planificación se puede ver alterada si ocurren eventos de fuerza mayor que atrasen algún contenido y/o evalaución.
 
