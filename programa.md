@@ -3,9 +3,9 @@ layout: default
 title: Programa
 ---
 
-<!-- ![](/assets/construccion.png)
+<!-- ![](/assets/construccion.png) -->
 
- [(Programa original en PDF)](https://puc-infovis.github.io/version-2023-1/IIC2026%20programa.pdf)  -->
+[(Programa original en PDF)](https://puc-infovis.github.io/version-2024-1/IIC2026%20programa.pdf)  
 
 
 ## Tabla de contenidos 
