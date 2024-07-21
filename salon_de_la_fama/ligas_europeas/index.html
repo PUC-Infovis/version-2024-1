@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <title>Ligas </title>
+</head>
+<body>
+    <!-- Barra de navegacion -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#title">Inicio</a></li>
+            <li><a href="#contexto">Contexto</a></li>
+            <li><a href="#visualizaciones">Visualizaciones</a></li>
+        </ul>
+    </nav>
+    <!-- Informacion con respecto a los datos y la herramienta -->
+    <header id="information">
+        <h1 id="title">Ligas Europeas (2008 - 2016)</h1>
+        <article id="contexto">
+            <h2 id="subtitle">Contexto</h2>
+            <div class="row">
+                <div class="description">
+                    <h3 class="description-title">Introducción</h3>
+                    <p>
+                        Europa es el continente donde se encuentra la mayor cantidad de ligas de fútbol profesional en el mundo. 
+                        Cada pais europeo cuenta con una liga de futbol profesional de primer nivel, como por ejemplo: Francia 
+                        tiene la Ligue 1, Alemania la Bundesliga, Italia la Serie A, entre otras. 
+                    </p>    
+                    <p>
+                        En este trabajo, trabajaremos con datos relacionados a diferentes ligas europeas de fútbol. 
+                        Los datos corresponden a las temporadas 2008-2009 hasta 2015-2016, y contienen información sobre los equipos,
+                        jugadores, partidos, entre otros. Para el desarrollo de las visualizaciones solo consideramos 11 ligas importantes
+                        de Europa, las cuales son: 
+                    </p>
+                    <ul>
+                        <li>France Ligue 1 (Francia)</li>
+                        <li>Belgium Jupiler League (Bélgica)</li>
+                        <li>England Premier League (Inglaterra)</li>
+                        <li>Germany 1. Bundesliga (Alemania)</li>
+                        <li>Italy Serie A (Italia)</li>
+                        <li>Netherlands Eredivisie (Paises Bajos)</li>
+                        <li>Poland Ekstraklasa (Polonia)</li>
+                        <li>Portugal Liga ZON Sagres (Portugal)</li>
+                        <li>Scotland Premier League (Escocia)</li>
+                        <li>Spain LIGA BBVA (España)</li>
+                        <li>Switzerland Super League (Suiza)</li>
+                    </ul>
+                </div>
+                <div id="description">
+                    <h3 class="description-title">Datos</h3>
+                    <p>
+                        Los datos utilizados fueron obtenidos a partir de la base de datos  <a href="https://www.kaggle.com/datasets/hugomathien/soccer/data" target="_blank">European Soccer Database</a>, 
+                        la cual contiene conjuntos de datos que evaluan diferentes metricas, tanto de jugadores como de equipos, en diferentes ligas del fútbol europeo.
+                        Las tablas que se utilizaron para el desarrollo de las visualizaciones son las siguientes:
+                    </p>
+                    <ol>
+                        <li><span class="bolder">Tabla Team y Team_Attributes</span>: contiene caracteristicas de cada equipo, como el nombre, capacidad de organizacion, entre otros. </li>
+                        <li><span class="bolder">Tabla Match</span>: contiene todos los partidos jugados en las temporadas 2008-2009 hasta 2015-2016.</li>
+                        <li><span class="bolder">Tabla Country</span>: contiene 11 paises que participan en las ligas europeas.</li>
+                        <li><span class="bolder">Tabla League</span>: contiene solamente 11 ligas europeas de las 50 en total</li>
+                    </ol>
+                    <p>
+                        Utilizando las tablas anteriores preprocesamos los datos originales y los transformamos en dos conjuntos de datos: 
+                        Tabla <span class="bolder english">Matchs</span> y <span class="bolder english">Teams</span>.
+                        La tabla <span class="bolder english">Matchs</span> obtiene ciertos atributos de otras tablas, como Country, League y Match. En cuanto a <span class="bolder english">Teams</span>, contiene ciertos atributos derivados de las tablas Team y Team_Attributes. 
+                    </p>
+                </div>
+                <div class="description">
+                    <h3 class="description-title">Descripción General</h3>
+                    <p>
+                        La visualización está principalmente dirigida a los entusiastas del fútbol europeo 
+                        que buscan tener mayor informacion de sus equipos favoritos y tomar decisiones informadamente. 
+                    </p>
+                    <p>
+                        De manera general,  estas visualizaciones son valiosas para aquellos interesados en realizar apuestas,
+                        ofreciendo datos precisos para tomar decisiones informadas, competir con amigos, o con la intención de ganar dinero.
+                    </p>
+                    <p>
+                        Específicamente, nuestra primera visualización te permitirá tener un panorama general de las ligas europeas, 
+                        lo que te ayudará a comparar las once ligas en base a ciertos atributos, como el total de la diferencia de goles 
+                        en todas las temporadas.
+                        Por otra parte, la segunda visualización te permitirá consultar cuántos equipos ha derrotado tu equipo favorito.
+                        Finalmente, la tercera visualización te permitirá identificar la distribución de las estadísticas del rendimiento 
+                        de tu equipo favorito durante todas las temporadas.
+                    </p> 
+                    <h3 class="description-title">Referencias</h3>
+                    <ul>
+                        <li>
+                            <p><a href="https://github.com/PUC-Infovis/Syllabus-2024-1/tree/main/Ayudantias/Ayudantia_6" target="_blank">Ayuadantía 6, Mapas y Grafos</a>: El código de la visualizacion 1 fue basado en el código de la pagina anterior</p>
+                        </li>
+                        <li>
+                            <p><a href="https://observablehq.com/@d3/directed-chord-diagram/2" target="_blank">Directed Chord Diagram on D3</a>: El código de la visualización 2 fue basado en el código de la pagina anterior. </p>
+                        </li>
+                        <li>
+                            <p><a href=" https://yangdanny97.github.io/blog/2019/03/01/D3-Spider-Chart" target="_blank">D3 Spider Chart Tutorial (Yang, D., 2019)</a>: El código de la visualización 3 fue basado en el código de la página anterior.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+    </header>
+    <!-- Comienzo de cada visualizacion: (1) titulo; (2) descripcion (3) idiom visual -->
+    
+    <main>
+        <div id="visualizaciones">
+            <!-- Visualizacion 1: Mapa de burbujas -->
+            <section id="section-vis-1" class="visualization">
+                <h2 id="subtitle">Proporción de diferencias de goles para cada liga</h2>
+                <div class="description">
+                    <p>
+                        El siguiente mapa de burbujas tiene como finalidad comparar la proporción de diferencias de goles
+                        entre las 11 ligas europeas. Esta proporción de goles es calculada como la suma de diferencia de goles segun el total de partidos 
+                        jugados. Cada <span class="bolder">marca circular</span> representa la proporcion de la diferencia de goles. 
+                        Tanto el <span class="bolder">area</span> como el <span class="bolder">color</span> de la marca circular representan
+                        a la cantidad de diferencia de goles en total para cada liga, tal que si el valor numérico es mayor, el área será más grande y el color más azul. Mientras que,
+                        si el valor numérico es menor, el área será más pequeña y el color más rojo.
+                    </p>
+                    <p>
+                        La visualizacion tiene las siguientes interacciones posibles: 
+                    </p>
+                    <ul>
+                        <li><span class="bolder">Filtro Top 5</span>: al hacer click en el boton "Top 5", realizamos un filtro mostrando solamente las 5 ligas con mayor proporcion de diferencia de goles.</li>
+                        <li><span class="bolder">Resetear filtro</span>: al hacer click en el boton "Resetear filtro", se mostrarán todas las ligas.</li>
+                        <li><span class="bolder">Tooltip</span>: al pasar el mouse sobre una marca circular, se mostrará información adicional sobre la liga, como el nombre de la liga, el país donde se realiza, cantidad total de partidos realizados, y cantidad total de diferencias de goles.</li>
+                        <li><span class="bolder">Navegación (zoom geométrico)</span>: al hacer doble click o hacer <span class="english">scroll</span>, se podra hacer <span class="english">zoom</span> dentro del mapa para ver con mayor detalle.</li>
+                        <li><span class="bolder">Click en cada liga</span>: al hacer click en cada liga, podemos <span class="underline">activar la visualización 2</span> para ver con mayor detalle aspectos relacionados a los equipos que participaron en la liga.</li>
+                    </ul>
+                </div>
+                <button id="filter-button">Top 5</button>
+                <button id="filter-reset">Resetear filtro</button>
+                <div id="vis-1"></div>
+            </section>
+            
+            <div class="row">
+                <!-- Visualizacion 2: Diagrama de cuerdas -->
+                <section id="section-vis-2" class="visualization">
+                    <h2 id="subtitle">Resultados de partidos entre equipos de una liga</h2>
+                    <div class="description">
+                        <p>
+                            El siguiente diagrama de cuerdas tiene como fin que el usuario pueda consultar el valor de la cantidad de equipos derrotados por un equipo en particular, para una liga seleccionada en la visualizacion anterior y temporada.
+                            Esta visualizacion solo se mostrará cuando el usuario haya seleccionado una liga en la primera visualización.
+                        </p>
+                        <p>
+                            Cada <span class="bolder">nodo</span> representa el nombre del equipo, y cada <span class="bolder">cuerda</span> representa la relacion de la existencia de un partido entre dos equipos. 
+                            El <span class="bolder">color</span> de la cuerda puede tomar 2 valores: (1) gris: codifica la existencia de un partido entre dos equipos; (2) azul: codifica la victoria de un equipo sobre otro.  
+                        </p>
+                        
+                    </div>
+                    <h3 id="title-vis-2"></h3>
+                    <select id="select-season" class="select">
+                        <option value="1" selected>Temporada 2008/2009</option>
+                        <option value="2">Temporada 2009/2010</option>
+                        <option value="3">Temporada 2010/2011</option>
+                        <option value="4">Temporada 2011/2012</option>
+                        <option value="5">Temporada 2012/2013</option>
+                        <option value="6">Temporada 2013/2014</option>
+                        <option value="7">Temporada 2014/2015</option>
+                        <option value="8">Temporada 2015/2016</option>
+                    </select>
+                    
+                    <div id="vis-2"></div>
+
+                    <div class="description">
+                        <p>
+                            La visualizacion tiene las siguientes interacciones posibles:
+                        </p>
+                        <ul>
+                            <li><span class="bolder">Mouse Hover</span>: Al pasar el mouse sobre algún equipo en específico, se resaltarán con color azul las cuerdas que unen al equipo actual y los equipos que éste ha derrotado. 
+                                Al mismo tiempo, el color del texto del equipo actual se cambiará a <span id="legend-winner">verde</span> (indicando que es el equipo ganador), y el resto de los equipos a <span id="legend-loser">rojo</span> (indicando que son los equipos derrotados).
+                            </li>
+                            <li><span class="bolder">Navegación (zoom semántico)</span>: Al hacer click en algún equipo en específico, la visualizacion filtrará solamente el equipo seleccionado y los equipos que han sido derrotados. Además, 
+                            a la izquierda de la visualizacion se mostrará el total de victorias del equipo seleccionado, y un listado de la información de todos los equipos derrotados junto con los goles que se han marcado en los partidos.
+                            </li>
+                            <li><span class="bolder">Filtro por temporadas</span>: Con el selector de temporadas nos permite filtrar los resultados de los partidos entre los equipos de la liga en una temporada en particular. </li>
+                            <li><span class="bolder">Click en cada equipo</span>: Al hacer click en algún equipo en particular <span class="underline">activamos la visualización 3</span> para ver en más detalles con respecto al rendimiento de este equipo seleccionado</li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- Visualizacion 3: Eje radial -->
+                <section id="section-vis-3" class="visualization">
+                    <h2 id="subtitle">Rendimiento de un equipo</h2>
+                    <div class="description">
+                        <p>
+                            El siguiente gráfico radial tiene como finalidad identificar la distribución de las estadísticas del rendimiento promedio de un equipo en especifico para todas las temporadas. 
+                            Esta visualización solo se mostrará o actualizará cuando el usuario haya seleccionado un equipo en la visualizacion 2.
+                        </p>
+                        <p>
+                            Cada <span class="bolder">punto</span> corresponde al valor promedio de una estadística para diferentes temporadas. El intervalo 
+                            de las estadísticas en cada <span class="bolder">eje radial</span> corresponde al porcentaje de la estadística en particular. Finalmente, 
+                            el <span class="bolder">área</span> segmentada en naranjo corresponde a la distribución de las estadísticas en conjunto. 
+                        </p>
+                        <p>
+                            
+                        </p>
+                    </div>
+                    <div id="vis-3"></div>
+                    <div class="description">
+                        <p>La visualizacion tiene las siguientes interacciones posibles:</p>
+                        <ul>
+                            <li><span class="bolder">Mouse Hover (atributos y <span class="english">tooltip</span>)</span>: al pasar el mouse sobre cada punto que marca el valor de un atributo, se destacará en rojo una linea 
+                                que conecta el punto con el centro del gráfico. Además, se mostrara un <span class="english">tooltip</span> con el nombre del atributo 
+                                y su valor respectivo para tener mayor detalle de la estadística.
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    
+    </main>
+
+    <footer>
+        <p> © Desarrollado por Franco Schiavone y Pedro Pablo Zavala Tejos | 2024</p>
+    </footer>
+    <!-- Scripts JS de las 3 visualizaciones + Script JS de vistas coordinadas -->
+    <script src="visualizacion_1.js"></script>
+    <script src="visualizacion_2.js"></script>
+    <script src="visualizacion_3.js"></script>
+    <script src="vistas_coordinadas.js"></script>
+</body>
+</html>

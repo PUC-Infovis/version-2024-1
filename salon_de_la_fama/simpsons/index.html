@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.js"></script>
+    <title>Simpsons Episode Visualization</title>
+</head>
+<body>
+    <div>
+        
+        <header class="contenedor">
+            <h1>Proyecto - Entrega 2 de 2 (60%)</h1>
+            <h2>IIC2026 - Visualización de Información</h2>
+            <h3>René Saavedra Vargas</h3>
+            <h3>Navegador utilizado: Opera GX</h3>
+        </header>
+
+        <main>
+            <section>
+                <p>Este corresponde al proyecto final del curso IIC2026 - Visualización de Información, en el cual se busca realizar una visualización 
+                    de datos utilizando la librería D3.js. Para esto se ha utilizado el dataset de los episodios de la serie de televisión "Los Simpsons", el cual
+                    puede ser encontrado en el siguiente <a href="https://www.kaggle.com/datasets/prashant111/the-simpsons-dataset">link</a>. 
+                </p>
+                <p>El dataset contiene la siguiente información de importancia:</p>
+                <ul>
+                    <li>Nombre del episodio</li>
+                    <li>Temporada</li>
+                    <li>N° Episodio (En temporada)</li>
+                    <li>N° Episodio (En serie)</li>
+                    <li>Fecha de emisión</li>
+                    <li>Escritores</li>
+                    <li>Director</li>
+                    <li>Calificación de IMBD</li>
+                    <li>Calificación de TMBD</li>
+                    <li>Cantidad de vistas en Estados Unidos (En millones)</li>
+                <p>Las visualizaciones a continuación corresponden a un análisis de los episodios de la serie, en el cual se pueden apreciar tendencias en la 
+                    cantidad de vistas por episodio, calificación y escritores de los mismos. 
+            </section>
+
+        </main>
+    </div>
+    <hr>	
+    <header>    
+        <br>
+        <h2>1. Gráfico de estadísticas de episodios de Los Simpsons</h3>
+    </header>
+    <main>
+        <p class="description-text">La siguiente visualización representa diferentes estadísticas de los episodios de Los Simpsons, incluyendo la cantidad de vistas,
+            la calificación de IMDB y la calificación de TMDB. Puedes seleccionar un rango de temporadas para visualizar. Clickear en un punto del Gráfico
+            mostrará la posición del episodio en la serie en las 3 visualizaciones. Además se puede ver la información del episodio al pasar el mouse sobre el punto.
+        </p>
+        <div class="slider-container">
+            <label for="min-season">Min Season: <span id="min-season-value">1</span></label>
+            <input type="range" id="min-season" name="min-season" min="1" max="34" value="1">
+            <label for="max-season">Max Season: <span id="max-season-value">34</span></label>
+            <input type="range" id="max-season" name="max-season" min="1" max="34" value="34">
+        </div>
+        <p> El siguiente botón cambiará la visualización de los episodios entre ver todos los episodios o el promedio de las temporadas seleccionadas.</p>
+        <button id="toggle-view">Cambiar Visualización</button>
+        <br>
+        <div class="container-vis-1">
+            <div id="vis-1" class="visualization"></div>
+            <div id="vis-2" class="visualization"></div>
+            <div id="vis-3" class="visualization"></div>
+        </div>
+        <div class="vis-1-info">
+            <h3>Información del Episodio</h3>
+            <p><span class="info-title">Título:</span> <span id="episode-name" class="info-text"></span></p>
+            <p><span class="info-title">Temporada:</span> <span id="episode-season" class="info-text"></span></p>
+            <p><span class="info-title">Episodio:</span> <span id="episode-episode" class="info-text"></span></p>
+            <p><span class="info-title">Fecha de Emisión:</span> <span id="episode-date" class="info-text"></span></p>
+            <p><span class="info-title">Escritores:</span> <span id="episode-writers" class="info-text"></span></p>
+            <p><span class="info-title">Director:</span> <span id="episode-director" class="info-text"></span></p>
+            <p><span class="info-title">IMDB Rating:</span> <span id="episode-imdb" class="info-text"></span></p>
+            <p><span class="info-title">TMDB Rating:</span> <span id="episode-tmdb" class="info-text"></span></p>
+            <p><span class="info-title">Vistas (En millones):</span> <span id="episode-views" class="info-text"></span></p>
+            <p><span class="info-title">Descripción:</span> <span id="episode-description" class="info-text"></span></p>
+        </div>
+        <hr>	
+
+        <h2 id="average-title">2. Contribución de los directores sobre las estadísticas de los episodios</h2>
+        <p class="description-text">La siguiente visualización corresponde a un gráfico de barras agrupadas que representa las contribuciones de cada director sobre las estadísticas de los episodios de Los Simpsons.
+            Cada director es representado por 2 barras, la de la izquierda representa el promedio de calificación de los episodios dirigidos por el director y la
+             de la derecha corresponde al promedio de vistas de los episodios dirigidos por el director.</p>
+             
+        <p class="description-text"> Al pasar el mouse sobre una barra se mostrará el nombre del director
+            y la cantidad de contribuciones que ha tenido en la serie. Existen varios filtros que se pueden aplicar a la visualización, como el mínimo de contribuciones, elegir
+            el rating a visualizar (IMDB o TMDB) y la forma de ordenar los directores (por nombre, rating o vistas).</p>
+            
+        <p class="description-text"> Finalmente, clickear uno o más directores actualizará la visualización 1
+            de los episodios para mostrar solo los episodios dirigidos por el director seleccionado. Volverlo a clickear mostrará todos los episodios nuevamente. Adicionalmente,
+            el slider de temporadas se actualizará para mostrar solo las temporadas de la visualización 1 en las que el director seleccionado ha dirigido episodios.</p>
+        
+        
+        <p class="description-text">Las barras color azul representan el promedio de calificación de los episodios dirigidos por el director
+                     y las barras color naranjo representan el promedio de vistas de los episodios dirigidos por el director.</p>
+
+        <div class="selector-container">
+            <label for="min-contributions">Min Contribuciones:</label>
+            <input type="number" id="min-contributions" name="min-contributions" min="0" value="0">
+            <label for="rating-select">Rating:</label>
+            <select id="rating-select" name="rating-select">
+                <option value="imdb">IMDB</option>
+                <option value="tmdb">TMDB</option>
+            </select>
+            <label for="sort-select">Ordernar por:</label>
+            <select id="sort-select" name="sort-select">
+                <option value="byName">Nombre</option>
+                <option value="byRating">Rating</option>
+                <option value="byViews">Vistas</option>
+            </select>
+            <button id="filter-button">Aplicar Cambios</button>
+        </div>
+        <br>
+        <div class="vis-4">
+            <div id="vis-4" class="visualization"></div>
+        </div> 
+
+        <hr>
+
+        <section>
+            <h2>Referencias:</h2>
+            <ul>
+                <li>Se utilizó como base el código entregado en la Tarea 2 del curso (Formato de página y estructura de código)</li>
+                <li>Ayudantía 2: <a href="https://github.com/PUC-Infovis/Syllabus-2024-1/tree/main/Ayudantias/Ayudantia_2">Link </a></li>
+                <li>Ayudantia 7: <a href="https://github.com/PUC-Infovis/Syllabus-2024-1/tree/main/Ayudantias/Ayudantia_7">Link </a></li>
+                <li>Documentación d3.brush(): <a href="https://observablehq.com/@d3/brushable-scatterplot">Link</a></li>
+                <li>Sliders: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range">Link</a></li>
+            </ul>
+        </section>
+    </main>
+    <script type="module" src="main.js"></script>
+</body>
+</html>

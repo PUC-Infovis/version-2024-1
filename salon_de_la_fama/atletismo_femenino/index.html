@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gráfico de Barras Agrupadas</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script defer src="main.js"></script>
+
+</head>
+<body>
+  <div id="lobby">
+    <h1>Atletas medallistas en los Juego Olímpicos</h1>
+    <p>Los Juegos Olímpicos son un evento multideportivo e internacional que se realiza cada cuatro años. Uno de los deportes que se lleva a cabo es el atletismo, el cual a su vez agrupa diversas disciplinas. Hay pruebas de pista, de saltos y de lanzamientos. </p>
+                <p>Esta herramienta se enfoca en el atletismo de medio fondo y fondo, es decir, las pruebas que van desde los 800m hasta la maratón. Los datos corresponden a las atletas medallistas (top 3 por prueba), en los últimos cuatro Juegos Olímpicos. Específicamente se trata de los podios de las pruebas de 800m, 1500m, 3000m con obstáculos, 5000m, 10000m y maratón. 
+                    Para cada distancia, se tiene el nombre, país, edad y tiempo que realizaron las mujeres que llegaron en las tres primeras posiciones de la final. Se incluyen datos de los Juegos de Pekín 2008, Londres 2012, Río 2016 y Tokio 2020.
+  </div>
+  <div id="contenedor-total">
+    
+    <div id="contenedor-vis">
+    <div id="vis-1"></div>
+    <div>
+      <label for="prueba-select">Selecciona la prueba:</label>
+      <select id="prueba-select"></select>
+    </div>
+    <div id="vis-2"></div>
+    </div>
+
+    <div id="contenedor-texto">
+      <div id="texto-1">
+        <p>Esta visualización es un mapa de calor. Es posible ver en qué lugares del mundo se concentran las atletas. Para mayor detalle, puedes hacer zoom y acercarte a algún país en específico. Además, al pasar el mouse por encima, se desplegará información específica de las atletas por país. </p>
+        <p>Gracias al dropdown que está justo entre las dos visualizaciones, es posible filtrar la información por prueba específica. Seleccionar una prueba específica a su vez "activará" la visualización de abajo.</p>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+
+      <div id="texto-2">
+        <p>Esta visualización es un gráfico de barras agrupadas. Por cada prueba, se pueden ver con detalles los tiempos a lo largo de las últimas cuatro Olimpiadas. Al pasar el mouse por encima, es posible ver con más detalle la información de la atleta en cuestión.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div>
+    <p>Hecho por: Antonia Contreras Klock</p>
+    <p>Saqué archivos y código del sylabus del curso (18-Visualizacion_de_Datos_Espaciales, 22-Zoom_y_panning). También utilicé ChatGPT. </p>
+    </div>
+
+</body>
+</html>
+
+

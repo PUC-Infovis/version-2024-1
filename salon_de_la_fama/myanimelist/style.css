@@ -1,0 +1,96 @@
+body {
+    font-weight: bold;
+    margin: 0 auto;
+    /* Puedes cambiar el color de fondo (background-color) si lo deseas */
+    background-color: #cbf3f0;
+    color: rgb(47, 47, 47);
+    min-width: 500px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 35px;
+    font-family: sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h5 {
+    font-size: 30px;
+    font-family: sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+svg {
+    border: solid 4px white;
+    background-color: #edf6f9;
+}
+
+.divLine {
+    margin-top: 30px;
+    height: 3px;
+    width: 100%;
+    background-color: rgb(126, 138, 138);
+}
+
+.textStart {
+    display: inline-block;
+    text-align: start;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.textStart li {
+    padding-top: 8px;
+}
+
+.textStart.legend span {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(0, 0, 0);
+    display: inline-block;
+}
+
+.refs {
+    display: inline-block;
+    text-align: left;
+}
+
+#selectors {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+select {
+    font: 24px sans-serif;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(126, 138, 138);
+    background-color: white;
+}
+
+#scatter-plot svg {
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+

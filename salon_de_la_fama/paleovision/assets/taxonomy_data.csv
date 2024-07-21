@@ -1,0 +1,15 @@
+superorder,order,suborder,clade,repetitions
+Dinosauria,Saurischia,Sauropodomorpha,Prosauropoda
+Dinosauria,Saurischia,Theropoda,Ceratosauria
+Dinosauria,Ornithischia,Marginocephalia,Ceratopsia
+Dinosauria,Saurischia,Theropoda,Coelurosauria
+Dinosauria,Saurischia,Theropoda,Carnosauria
+Dinosauria,Saurischia,Sauropodomorpha,Sauropoda
+Dinosauria,Ornithischia,Genasauria,Thyreophora
+Dinosauria,Ornithischia,Ornithopoda,Ankylopollexia
+Dinosauria,Saurischia,Theropoda,Spinosauridae
+Dinosauria,Saurischia,Theropoda,Coelophysoidea
+Dinosauria,Saurischia,Theropoda,Dilophosauridae
+Dinosauria,Ornithischia,Ornithopoda,Dryosauridae
+Dinosauria,Ornithischia,Marginocephalia,Pachycephalosauria
+Dinosauria,Ornithischia,Ornithopoda,Hypsilophodontidae

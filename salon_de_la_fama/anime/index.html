@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.js"></script>
+    <title>Anime Visualizations</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Anime Dataset Visualization</h1>
+        <p>En este proyecto se trabajará con la base de datos de MyAnimeList. La plataforma ofrece información muy completa 
+            sobre series y películas de anime, además de permitir que los usuarios puedan calificar y dejar reseñas de cada 
+            una. A partir de esto, la página muestra estadísticas de popularidad y calidad. Se trabajará con la versión 
+            preprocesada de los datos, la cual contiene 10,364 animes en total.
+
+            El conjunto de datos muestra información del anime, como el nombre en japonés e inglés, el tipo de anime (TV, 
+            película, OVA y otros), la cantidad de episodios, el estudio de producción, el origen del anime, la duración 
+            promedio en minutos de los episodios, la clasificación por edad, el año de emisión y los géneros a los que 
+            pertenece el anime. Además de estos datos, también se muestra el puntaje del anime a partir de la calificación 
+            de los usuarios en la página y la posición en el ranking a partir del puntaje.</p>
+        <p>Datos originales:
+            <a href="https://www.kaggle.com/datasets/hernan4444/anime-recommendation-database-2020?select=anime.csv">
+                Anime Recommendation Database 2020 en Kaggle</a>
+        </p>
+        <p>Versión que se usará:
+            <a href="https://docs.google.com/spreadsheets/d/1xVkSsB-vnh1GX7Tn7nUjiuI1h990N8KGRvCrTWvRyNQ/edit#gid=1023424596">
+                Versión del dataset en Google Sheets</a>
+        </p>
+        <p>
+            La herramienta busca facilitar la exploración de los distintos animes presentes en la base de datos. 
+            Por ello, los usuarios podrán:
+            <p>Navegar a través de los animes según su puntuación.</p>
+            <p>Comparar las puntuaciones de animes según su género.</p>
+            <p>Explorar la distribución de animes por año de emisión y puntuación.</p>
+        </p>
+        <h3>Visualización 1: Gráfico de Dispersión Interactivo</h1>
+        <p>Esta visualización permite explorar animes según su puntuación y año de emisión. Los colores codifican para cada género como
+             se ve en la leyenda. Se puede hacer brush, lo que se refleja en la segunda visualización, reduciendo los datos mostrados. 
+        </p>
+        <div id="vis-1"></div>
+
+        <h3>Visualización 2: Glifo de Barras por Género</h1>
+        <p>Esta visualización compara las puntuaciones de animes por género. Los colores codifican la puntación de los animes que se agrupan
+         en cada barra, si la puntación es menor a 5 es baja, mayor a 5 y menor a 7.5 es media y mayor a 7.5 es alta. Se muestra un tooltip con información
+          relevante al pasar el mouse sobre cada barra.
+        </p>
+        <div id="vis-2"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

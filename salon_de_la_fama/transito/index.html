@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accidentes de Tránsito en Santiago</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<body>
+    <h1>Accidentes de Tránsito en Santiago Urbano 2021</h1>
+    
+    <div id="document-info">
+        <h2>Descripción de la herramienta</h2>
+        <p>
+            El problema a abordar es la visualización de datos de accidentes de tránsito en la Región Metropolitana de Chile. Esta región, que incluye la capital, Santiago, es la más densamente poblada y urbanizada del país. Esto resulta en una alta concentración de tráfico vehicular y, consecuentemente, una considerable cantidad de accidentes de tránsito.
+        </p>
+        <p>
+            Los datos han sido obtenidos de la Comisión Nacional de Seguridad del Tránsito de Chile (CONASET). Antes de utilizarlos en el proceso de diseño, los datos han sido preprocesados utilizando un algoritmo de clustering (DBSCAN) para encontrar los puntos críticos de accidentes. <a href="https://mapas-conaset.opendata.arcgis.com/search?categories=%252Fcategories%252Fregi%25C3%25B3n%2520metropolitana&collection=Dataset">Fuente de datos</a>.
+        </p>
+        <p>
+            El código utilizado para la creación de las visualizaciones es propio.
+        </p>
+
+        <h2>Visualización 1: Mapa Interactivo</h2>
+        <p>
+            El mapa muestra las comunas de Santiago. Al pasar el mouse sobre una comuna, cambia de color y muestra su nombre. Al hacer clic en una comuna, esta se selecciona y el gráfico de barras se actualiza para mostrar los datos de accidentes en esa comuna. Además, puedes hacer zoom y pan en el mapa para explorar diferentes áreas de Santiago. Cuando seleccionas una comuna, los datos de esa comuna se destacan, y puedes ver la cantidad de accidentes en clusters, que están representados por puntos de diferentes tamaños y colores.
+        </p>
+
+        <h2>Visualización 2: Gráfico de Barras</h2>
+        <p>
+            El gráfico de barras muestra los porcentajes de diferentes tipos de accidentes y causas. Puedes seleccionar qué atributo deseas ver (tipo de accidente, causa, etc.) mediante un menú desplegable. Al hacer clic en una comuna en el mapa, el gráfico de barras se actualiza para mostrar los datos específicos de esa comuna. Al pasar el mouse sobre una barra, aparece un tooltip que muestra información detallada sobre esa barra específica, como el porcentaje y el número de accidentes.
+        </p>
+    </div>
+
+    <div id="wrapper">
+        <div id="content">
+            <div>
+                <h2 id="title">Mapa de Santiago Urbano y puntos críticos</h2>
+                <svg id="map"></svg>
+            </div>
+            <div id="info">
+                <div id="comunaInfo"></div>
+                <div id="controls">
+                    <select id="columnSelect">
+                        <option value="TIPO">Tipo de Accidente</option>
+                        <option value="CAUSA">Causa del Accidente</option>
+                        <option value="CALZADA">Tipo de Calzada</option>
+                        <option value="TIPO_CALZ">Material de la Calzada</option>
+                        <option value="ESTADO_CAL">Estado de la Calzada</option>
+                    </select>
+                    <button id="filter-button">Seleccionar</button>
+                </div>
+                <div id="stackedBarChart"></div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/createMap.js" defer></script>
+    <script src="scripts/createBarChart.js" defer></script>
+</body>
+</html>

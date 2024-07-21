@@ -1,0 +1,101 @@
+body {
+    margin: 0 auto;
+    /* Puedes cambiar el color de fondo (background-color) si lo deseas */
+    background-image: url('assets/fossilbg.jpg');
+
+    background-repeat: repeat;
+
+    background-size: auto;
+    max-width: 80%;
+    min-width: 500px;
+    text-align: center;
+    justify-content: center;
+
+}
+.disclaimer {
+    background-color: red;
+    color: #ffff00;
+}
+
+#ornithiscian{
+    background-color: #9e00ab;
+    color: #9e00ab;
+}
+#saurischian{
+    background-color: #ff9300;
+    color:  #ff9300;
+}
+
+.container{
+    background-color: rgba(128, 64, 0, 0.7);
+    border-radius: 25px;
+    color: azure;
+    justify-content: center;
+    align-items: center;
+}
+
+.case h2 {
+    /* Puedes cambiar el color de fondo (background-color) si lo deseas */
+    background-color: #e0a45e;
+    padding: 10px;
+    margin: 10px;
+}
+
+.response {
+    text-align: start;
+    border: solid gray 2px;
+    background-color: rgba(0,0,0,0.4);
+
+    padding: 10px;
+    margin: 10px;
+}
+
+.response h5 {
+    margin: 0px;
+    color: rgb(57, 57, 57);
+}
+
+.response h4 {
+    margin-bottom: 0px;
+}
+
+.img {
+    max-width: 30px;
+    display: inline-flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+img{
+    max-width: 400px;
+    height: auto;
+}
+
+.hint{
+    opacity: 0.7;
+    background-color: rgb(242, 241, 188);
+    color: rgb(28, 41, 146);
+    border: 1px solid;
+    padding: 5px;
+    font-weight: bolder;
+}
+svg {
+    border: solid 4px #0a0a0a;
+}
+.buttonholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+}
+.buttonholder img {
+
+    max-width: 300px;
+    max-height: 300px;
+    min-height: 100px;
+}
+
+.image-button:hover {
+    opacity: 0.8; /* Optional: add a hover effect */
+}

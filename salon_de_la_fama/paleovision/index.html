@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.js"></script>
+    <title>PALEOVISION</title>
+</head>
+<body>
+<div class="container">
+    <h1>Proyecto IIC2026</h1>
+    <img src="assets/PALEO-VISION-22-06-2024.png">
+    <div class="case">
+        <h2>Acerca de la herramienta</h2>
+        <div class="response">
+            En PaleoVision, una herramienta de visualización creada a partir de los datos del dataset de
+            <a href="https://www.kaggle.com/datasets/kjanjua/jurassic-park-the-exhaustive-dinosaur-dataset?resource=download">Kaggle</a>,
+            con el fin de visualizar datos macro acerca de los dinosaurios y observar su diversificación taxonómica y geográfica
+            en los distintos lapsos de tiempo en los que existieron. Los datos fueron trabajados para una mejor modelación de las visualizaciones.
+
+            Se tienen dos visualizaciones:
+            <ul>
+                <li>Un Grafo Taxonómico que muestra nodos representando valores de cada categoría (Superorder, Order, Suborder y Clade) y sus relaciones taxonómicas. Los nodos se colorean según el Order al que pertenecen, siendo <span id="saurischian">[]</span> para los Saurischian y <span id="ornithiscian">[]</span> para los Ornithiscian. El radio de cada nodo se relaciona con el número de dinosaurios que comparten dicha categoría taxonómica.</li>
+                <li>Un mapa global interactivo que permite hacer zoom y hoover para ver detalles geográficos. El color de cada país indica el número de dinosaurios encontrados en esa ubicación. Al hacer clic en un país se filtran los dinosaurios encontrados en dicho país.</li>
+            </ul>
+
+            Puedes observar información detallada de dinosaurios asignando filtros a través de las visualizaciones y usando los botones para filtrar resultados según el periodo de tiempo seleccionado.
+        </div>
+    </div>
+
+    <div class="case">
+        <h2>Dinosaurio</h2>
+        <div class="response">
+            <div class="buttonholder">
+                <img id="dinotype">
+                <div class="textStart">
+                    <ul>
+                        <li>Nombre científico: <span id="detailName"></span></li>
+                        <li>Vivió durante: <span id="detailEra"></span></li>
+                        <li>Encontrado en: <span id="detailCountry"></span></li>
+                        <li>Dieta: <span id="detailDiet"></span></li>
+                        <li>Taxonomía: <span id="detailTaxonomy"></span></li>
+                        <li>Tipo de Dinosaurio: <span id="detailType"></span></li>
+                    </ul>
+                    <div onclick="getDino()"><img src="assets/Ver-un-Dinosaurio-25-06-2024.png"></div>
+                    <div id="filterValues"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="case">
+        <h2>Seleccionar un periodo de tiempo</h2>
+        <div class="buttonholder">
+            <div id="AllEra"><img src="assets/mesozoico-24-06-2024.png"></div>
+            <div id="Cretaceous"><img src="assets/cretacico-24-06-2024.png"></div>
+            <div id="Jurassic"><img src="assets/jurasico-24-06-2024.png"></div>
+            <div id="Triassic"><img src="assets/triasico-24-06-2024.png"></div>
+        </div>
+    </div>
+
+    <div class="case">
+        <h2>Grafo Taxonómico y Distribución Global</h2>
+        <div class="response">
+            <div id="vis-1"></div>
+            <div id="vis-2"></div>
+        </div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

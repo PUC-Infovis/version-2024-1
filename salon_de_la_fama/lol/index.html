@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LoL Champion Analysis</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="title">Análisis de desempeño de LoL</div>
+        <div class="description">
+            Los datos de esta visualización corresponden al historial de partidas de un jugador de LoL. 
+            Se compara el desempeño que ha tenido con los diferentes campeones que ha jugado, y también su desempeño
+            al jugar contra ciertos campeones enemigos (matchups), el objetivo de esta herramienta es que un jugador de lol cargue los datos de su cuenta y pueda tener un recap sobre sus matchups, 
+            pero se presentan estos datos como demo.
+            El KDA corresponde al ratio de (asesinatos + asistencias) / muertes.
+            El winrate corresponde al porcentaje de partidas ganadas. (partidas ganadas / partidas totales)  <br>
+            Puedes filtrar por rol en ambos gráficos usando el selector de abajo. <br>
+            (Detalle: la primera vez que se carga la página se demora en cargar las imagenes de los campeones, por lo que se recomienda esperar unos segundos antes de interactuar con la visualización.)
+        </div>
+    </div>
+
+    <div class="options-bar">
+        <div id="filter-role">
+            <select id="role">
+                <option value="TOP">Top</option>
+                <option value="JUNGLE">Jungla</option>
+                <option value="MIDDLE">Mid</option>
+                <option value="BOTTOM">ADC</option>
+                <option value="UTILITY">Support</option>
+            </select>
+            <button id="role-button">Filtrar por rol</button>
+        </div>
+
+        <div id="reset">
+            <button id="reset-button">Reset</button>
+        </div>
+    </div>
+
+    <div class="container-wrapper">
+        
+        <div class="container" id="bubble-container">
+            
+            <div id="bubble-description" class="description">
+                <!-- Este corresponde al gráfico que usa simulación de fuerzas ;) -->
+                <p>
+                    <strong>Interacciones:</strong>
+                    Pasa el ratón sobre una burbuja para ver detalles sobre el matchup. <br>
+                    Selecciona campeones para actualizar gráfico de barras con los datos de esos campeones como oponente. 
+                </p>
+
+                <p>
+                    <strong>Codificación:</strong>
+                    El tamaño de las burbujas representa la cantidad de partidas jugadas contra ese campeón. <br>
+                    El color del borde de las burbujas representa el porcentaje de victorias contra ese campeón (rojo: bajo, verde: alto).
+                </p>
+            </div>
+
+            <div class="chart-title">Comparación de matchups</div>
+            <div id="selected-champion">
+                Viendo los matchups de: <span id="selected-champion-name"> Todos</span>
+            </div>
+            <div id = "bubble-chart">
+                <svg>
+                    <g id="color-legend-bubble"></g>
+                </svg>
+            </div>  
+            
+            
+        </div>
+        <div class="container" id="bar-container">
+            <div id="bar-description" class="description">
+
+
+            <p>
+                <strong>Interacciones:</strong>
+                Pasa el ratón sobre una barra para ver detalles sobre el campeón. <br>
+                Haz clic en un rectángulo para seleccionar un campeón y ver sus matchups en el gráfico de burbujas.
+            </p>
+
+            <p>
+               <strong>Codificación:</strong>
+                El eje X muestra los nombres de los campeones <br>
+                El eje Y muestra el porcentaje de victorias.<br>
+                El color de las barras representa el KDA del campeón (rojo: bajo, verde: alto). 
+            </p>
+            </div>
+            <div class="chart-title">Desempeño con campeones</div>
+            <div id = "bar-chart">
+                <svg>
+                    <g id="x-axis"></g>
+                    <g id="y-axis"></g>
+                    <g id="chart"></g>
+                    <g id="color-legend-bar"></g>
+                </svg>
+            </div>  
+            
+            
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-title">Referencias de código usado:</div>
+        <div class="footer-description">
+            <a href="https://github.com/PUC-Infovis/Syllabus-2024-1/blob/main/Codigos/20-Brushing_y_agregacion.js/1.brush.js">Código de la clase 20</a>
+        </div> 
+
+    <div class="tooltip"></div>
+    
+    
+    <div class="tooltip"></div>
+    <script src="script.js"></script>
+</body>
+</html>

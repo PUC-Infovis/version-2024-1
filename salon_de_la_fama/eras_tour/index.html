@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v4.min.js"></script>
+    <title>Proyecto final</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Canciones cantadas en The Eras Tour</h1>
+        <br>
+        <br>
+        <div class="introduccion">
+            <p> Desde marzo del 2023, Taylor Swift ha estado por todo el mundo realizando The Eras Tour, show que consiste en 
+                cantar los mayores éxitos de sus 18 años de carrera musical. Dentro del concierto en el que canta 44 canciones, 
+                tiene un segmento de 15 minutos en el que canta dos canciones sorpresas de manera acústica. Estas canciones son 
+                distintas a las canciones base que tiene en todos los shows, y le permiten generar momentos únicos con sus fans.
+            </p>
+            <p>Los datos del dataset incluyen todas las canciones de sus álbumes, además de algunas canciones que lanzó como sencillos. 
+                Se identifican cuáles han estado en el setlist oficial y las canciones sorpresa que ha interpretado en sus conciertos 
+                desde el 17 de marzo hasta el 26 de noviembre del 2023. Para todas las canciones se incluye su nombre y el álbum al que 
+                pertenecen.
+            </p>
+            <p>Para las canciones, se registra la fecha en que las interpretó y el lugar donde se realizó el concierto con su 
+                latitud y longitud respectiva. También se tiene en cuenta el caso en que una canción haya sido repetida varias veces, 
+                por lo que se incluye el dato de cuántas veces la cantó, junto con el lugar y la fecha de estas instancias.</p>
+            <p>
+                A partir de la herramienta se espera que el usuario pueda informarse acerca de que canciones Taylor Swift cantó 
+                hasta una fecha en particular. Y poder visualizar cuanto de un álbum ha sido cantado hasta dicha fecha.
+            </p>
+            <p>
+                Además, al ser una herramienta interactiva se puede navegar por el mapa y 
+                seleccionar una localización en el que haya sido uno los conciertos, para poder ver las canciones en específico 
+                que se cantaron.
+            </p>
+            <p>
+                Para realizar esta herramienta me inspiré para hacer el slider con <a HREF="https://d3-graph-gallery.com/graph/density_slider.html"></a>,
+                y el resto fue se desarrolló a partir de los códigos vistos en clases o autoría propia.
+            </p>
+
+        </div>
+        <br>
+        <br>
+    
+        <h2>Visualización 1: Porcentaje de cada álbum cantado</h2>
+        <ul class="legend textStart">
+            <li>
+                Cada gráfico de barra representa el porcentaje de cuantas canciones de un álbum de Taylor Swift ha sido cantado. Solo
+                se muestran los álbumes que han tenido al menos una canción cantada.
+            </li>
+            <li>
+                Cada álbum tiene un color específico. Taylor Swift: <span id="Taylor_Swift"></span>, Fearless TV: <span id="Fearless_TV"></span>,  
+                Speak Now TV: <span id="Speak_Now_TV"></span>, Red TV:  <span id="Red_TV"></span>, 1989 TV:  <span id="Nineteen_Ninety_Nine_TV"></span>,
+                Reputation:  <span id="Reputation"></span>, Lover:  <span id="Lover"></span>, Folklore:  <span id="Folklore"></span>,
+                Evermore: <span id="Evermore"></span>, Midnights: <span id="Midnights"></span> y Otro: <span id="Other"></span>.
+            </li>
+            <li>
+                Hay un slider que permite regular hasta que fecha se ven las canciones cantadas. Este funciona para las dos visualizaciones
+            </li>
+            <li>
+                Cuando se hace mouseover por la parte más opaca del gráfico de barra se muestra el nombre de las canciones
+                cantadas. Y cuando se pasa el mouse por la parte más clara se muestran en un tooltip las canciones que todavía 
+                no sean cantado.
+            </li>
+            <li>
+                Al hacer click en alguno de los álbumes, en los estadios de la visualización 2 solo se muestran las canciones que 
+                pertenecen a dicho álbum.
+            </li>
+        </ul>
+        <div class="slidecontainer">
+            <input type="range" min="0" max="0" value="0" class="slider" id="rangoFechas">
+            <p>Fecha seleccionada: <span id="valorFecha"></span></p>
+        </div>
+        <div id="vis-1">
+        </div>
+        <br>
+        <br>
+
+        <div class="divLine"></div>
+        <h2>Visualización 2 - Ubicación de los conciertos</h2>
+        <p>Esta visualización solo se verá después de seleccionar una fecha con el slider o haciendo click en algún álbum</p>
+  
+        <ul class="legend textStart">
+            <li>
+                Cada punto representa un estadio donde ha sido algún concierto.
+            </li>
+            <li>
+                Al hacer mouseover encima de un punto se pueden observar las canciones que fueron cantadas en dicho lugar.
+            </li>
+            <li>
+                Se puede hacer zoom y padding en esta visualización.
+            </li>
+            <li>
+                La fecha hasta donde se ven las canciones cantadas se rige por el slider.
+            </li>
+            <li>
+                El área de los circulos representa la cantidad de canciones que fueron cantadas en dicho lugar.
+            </li>
+
+        </ul>
+        <div id="vis-2">
+            <h4 id="selected"></h4>
+        </div>
+        <br>
+        <br>
+    </div>
+    <script src="main.js"></script>
+    <script src="configuration.js"></script>
+</body>
+
+</html>

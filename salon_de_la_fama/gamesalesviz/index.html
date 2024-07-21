@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.js"></script>
+    <title>Venta de juegos VGChartz</title>
+    
+</head>
+
+
+<body>
+    <div class="container">
+
+        <header>
+            <h1>Datos históricos de ventas de videojuegos - VGChartz</h1>
+            <h3>Integrantes</h2>
+                <ul>
+                    <li>Benjamín Blancaire</li>
+                </ul>
+                
+            <p>
+                Esta herramienta utiliza un set de datos obtenios de VGChartz obtenido de este <a href="https://www.kaggle.com/datasets/gregorut/videogamesales/data">link</a>. Se puede ver la cantidad de ventas de videojuegos según zona, su género,
+                año de publicación, plataforma, entre otros. El objetivo general de esta herramienta es proporcionar una forma de 
+                encontrar y descubrir videojuegos de interés según tendencias descubiertas y preferencias del usuario. Se presentan 3 vistas: 
+                una de ventas de videojuegos según año, una de wishlist y una de heatmap de popularidad de géneros. <br>
+                La primera ayuda a encontrar juegos populares según el estado actual de los filtros. La segunda, es más una herramienta que una vista, guarda los resultados de interés encontrados. La tercera es una vista que muestra la popularidad de géneros según año y cantidad de ventas, lo cual ayuda a encontrar tendencias.
+                <br>
+                Con todo esto, se espera que el usuario pueda encontrar juegos que puedan serle de interés.
+            </p>
+            
+        </header>
+        
+
+        <div class="divLine"></div>
+        
+        <h2>Venta de videojuegos según año: Scatterplot</h2>
+        <p>
+            Canales:
+        </p>
+        
+            <ul>
+                <li>Posición vertical de un punto indica la cantidad de ventas</li>
+                <li>Posición horizontal de un punto indica el año de publicación</li>
+                <li>El color de un punto indica su género. Los colores estan dispuestos dentro de las categorías de género en sección de filtros</li>
+            </ul>
+        <p>
+            Interacciones:
+        </p>
+        
+            <ul>
+                <li>Existe un brush que selecciona elementos para agregar en la wishlist</li>
+                <li>Al posar por sobre un punto se puede ver los datos correspondientes</li>
+                <li>La barra de filtros a la derecha afecta qué datos utiliza esta vista y la de heatmap</li>
+                <li>La selección dentro del span de la vista de heatmap afecta los datos de esta vista</li>
+            </ul>
+        <div class="rows">
+
+            <div class="row-item">
+
+                <div id="vis-1"></div>
+            </div>
+
+            <div class="row-item">
+                <h3>Filtros</h3>
+
+                <div class="filtro"></div>
+            </div>
+
+        </div>
+
+        
+        <div class="divLine"></div>
+
+        <h2>Wishlist</h2>
+        <p>
+            Canales:
+        </p>
+        
+            <ul>
+                <li>2 Listas. La primera corresponde a selecciones de título, mientras que la segunda corresponde a elementos guardados de la primera</li>
+                <li>Posicion vertical indica el orden de los títulos según ventas de videojuego</li>
+            </ul>
+        <p>
+            Interacciones:
+        </p>
+        
+            <ul>
+                <li>Es una herramienta complementaria al Scatterplot de Precios. Sus selecciones provienen del brush de esta vista.</li>
+                <li>Se pueden añadir títulos seleccionados que se quieran guardar en la wishlist con un botón con "visto bueno"</li>
+                <li>Se pueden eliminar elementos de la wishlist con los botones "x" correspondientes</li>
+                <li>Se puede copiar en el portapapeles los títulos de la wishlist</li>
+            </ul>
+
+        <div id="wishlist"></div>
+
+        <div class="divLine"></div>
+
+
+        <h2>Popularidad de géneros: Heatmap</h2>
+            <p>
+                Canales:
+            </p>
+            
+                <ul>
+                    <li>La altura codifica el género</li>
+                    <li>Posición horizontal codifica el año</li>
+                    <li>Color codifica la cantidad de ventas promedio o totales de un subgrupo de género y año. Este va de más saturado a menos saturado para representar el precio más alto al más bajo.</li>
+                    <li>Ancho y altura solo dependen de la población de categorías y no una magnitud</li>
+                </ul>
+            <p>
+                Interacciones:
+            </p>
+            
+                <ul>
+                    <li>Existe un brush que filtra según las celdas pertenecientes a la selección. Esto modifica la vista de ventas (Scatterplot).</li>
+                    <li>Existen botones que reinician los filtros de género y año (y portanto las selecciones)</li>
+                    <li>Hay un botón que alterna agrupación hecha de los grupos de la vista. Se puede ver la suma total de ventas de un grupo o el promedio de ventas</li>
+                </ul>
+            <div class="filtro2">
+                <button id="toggle-button">Mostrar Promedio</button>
+            </div>
+
+            <div id="vis-2"></div>
+           
+            
+
+        
+
+        <div class="divLine"></div>
+
+        <h2>Referencias</h2>
+        <ul>
+            <li>Template Proyecto 1</li>
+            <li>Códigos clase 20</li>
+            <li>Ayudantía 7</li>
+            <li><a href="https://d3-graph-gallery.com/graph/heatmap_tooltip.html">Página para ver cómo se puede hacer un heatmap</li>
+            <li>Snippets de filtro y otros aspectos inspirados en resultados de ChatGTP</li>
+        </ul>
+    </div>
+
+    
+    <script src="main.js"></script>
+</body>
+    

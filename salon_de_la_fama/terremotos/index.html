@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Earthquake Visualization</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Terremotos en el Tiempo</h1>
+        <p>
+            Las visualizaciones muestran los terremotos en el mundo. En este caso, se usó un dataset generado con <a href="https://earthquake.usgs.gov/earthquakes/search/">datos de terremotos</a> que contiene terremotos registrados en una semana. <br>
+            Los datos son de la API de USGS (United States Geological Survey).
+            La visualización incluye un mapa que muestra la ubicación de los terremotos y un histograma <br>que muestra la cantidad de terremotos por magnitud.
+        </p>
+
+        <h2>Visualización 1 - Terremotos en el Mundo</h2>
+        <p>Esta visualización muestra la ubicación de los terremotos en el mundo.
+            Los círculos representan los terremotos y el tamaño del <br>círculo representa la magnitud del terremoto.
+            Se puede hacer brush en el mapa para seleccionar un rango de terremotos. 
+            El <br>color es <span id="base_color">steelblue</span> para los terremotos sin brush y <span id="brush_color">orange</span> para los terremotos dentro del brush.
+            El tamaño del círculo representa <br>la magnitud del terremoto, donde a mayor tamaño mayor la magnitud de 0 a 7. Si se mantiene el mouse sobre un círculo, se tiene un <br>tooltip que muestra la magnitud del terremoto.
+            
+             </p>
+             
+    <div id="map"></div>
+    
+    
+        <h2>Visualización 2 - Cantidad de Terremotos por Magnitud</h2>
+        <p>La visualización también incluye un histograma que muestra la cantidad de terremotos por magnitud.
+        Para reducir la cantidad de datos, <br>seleccione una magnitud en el menú desplegable. 
+        Para reiniciar la selección del brush, haga clic en el botón "Reiniciar Selección". <br>
+        Si se mantiene el mouse sobre alguna de las barras, se tiene un tooltip que muestra la cantidad de terremotos por magnitud <br> tanto del set de barras azules como del set de barras naranjas.
+        </p>
+        <div id="btn"></div>
+    <div id="histogram"></div>
+    
+
+
+    <!-- <label for="reduceData">Reducir datos:</label>
+    <br>
+    <select id="reduceData">
+        <option value="-">-</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+    </select>
+    <br> -->
+    
+    <!-- <label for="filterMag">Filtrar por magnitud mayor igual a:</label>
+    <br>
+    <select id="filterMag">
+        <option value="-">-</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+    </select>
+    <br>
+    
+    <label for="resetBrush">Reiniciar selección:</label>
+    <br>
+    <button id="resetBrush">Reiniciar Selección</button> -->
+</div>
+    <script src="main.js"></script>
+    <p>
+        Referencias: <br>
+        <a href="https://earthquake.usgs.gov/earthquakes/search/">Datos de Terremotos</a><br>
+        <a href="https://altair-viz.github.io/gallery/interval_selection_map_quakes.html">Inpiración</a><br>
+        <a href="https://github.com/PUC-Infovis/Syllabus-2024-1/tree/main/Codigos/18-Visualizacion_de_Datos_Espaciales">Clase 18</a><br>
+        <a href="https://github.com/PUC-Infovis/Syllabus-2024-1/tree/main/Codigos/20-Brushing_y_agregacion.js">Clase 20</a><br>
+        <a href="https://github.com/PUC-Infovis/Syllabus-2024-1/tree/main/Ayudantias/Ayudantia_6">Ayudantía 6</a><br>
+
+    </p>
+</body>
+</html>

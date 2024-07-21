@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v7.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Visualización de puntuaciones en MyAnimeList</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Visualización de las puntuaciones por categoría de anime en MyAnimeList</h1>
+        <br>
+        <p class="textStart">
+            My Anime List (MAL) es un sitio web en el cual los usuarios pueden llevar un 
+            registro personal de las series animadas que han visto, las que están viendo y las que desean ver. 
+            Mas su funcionalidad no se limita a la catalogación de series, sino que también permite a los usuarios 
+            calificar estas según su propio criterio en base a una escala del 1 a 10. Estas calificaciones son 
+            utilizadas para generar rankings de popularidad y calidad de las series, lo que permite a los usuarios 
+            descubrir nuevas series según sus gustos y preferencias.
+        </p>
+        <br>
+        <p class="textStart">
+            Esta herramienta tiene como objetivo visualizar de manera interactiva tanto las puntuaciones de las distintas categorías de anime en MyAnimeList,
+            como las puntuaciones de los animes que pertenecen a estas categorías. Para ello, se han considerado distintas categorías de anime, como géneros, 
+            tipos de contenido y clasificaciones por edades, tal que se han calculado los puntajes promedio de la suma de los animes que pertenecen a cada una de
+            estas categorías y las subcategorías que estas contienen. Se han considerado los años de lanzamiento de los animes para poder visualizar cómo han variado
+            las puntuaciones de los animes que pertenecen a cada categoría a lo largo del tiempo, de modo que el usuario podrá conocer detalles acerca los animes que
+            pertenezcan a una (sub)categoría seleccionada en la primera visualización al pasar el mouse sobre alguno de los puntos presentes en la segunda visualización.
+        </p>
+        <br>
+        <br>
+        <h2>Visualización 1 - Puntajes promedio de las distintas categorías de anime</h2>
+        <br>
+        <ul class="legend textStart">
+            <li>
+                La siguiente visualización busca mostrar el puntaje promedio de las distintas categorías de animes en 
+                MyAnimeList de una manera interactiva. Estas categorías pueden ser tanto géneros de anime como tipos de 
+                contenido y clasificaciones por edades.
+            </li>
+            <li>
+                Cada género se representa como un área circular, de manera que cada una de estas contiene otras subáreas
+                circulares más pequeñas que representan los tipos de contenido existentes en el género, las que, a su vez,
+                contienen otras subáreas aún más pequeñas que representan las clasificaciones de edad recomendadas 
+                (por ejemplo, "Drama 🠖 TV 🠖 G - All Ages").
+            </li>
+            <li>
+                El tamaño de cada área circular es proporcional a la cantidad de animes que pertenecen a esa (sub)categoría,
+                mientras que su color representa el puntaje promedio de los animes de esa (sub)categoría, tal que un color
+                más claro indica un puntaje promedio más bajo y un color más oscuro indica un puntaje promedio más alto.
+            </li>
+            <li>
+                Cabe destacar que el puntaje promedio es relativo a la cantidad de animes que pertenecen a esa (sub)categoría,
+                así como que la posición de las áreas circulares no tiene un significado en particular.
+            </li>
+            <li>
+                Todas estas áreas están etiquetadas con el nombre de su (sub)categoría correspondiente, de manera que al hacer
+                click en una de ellas se realizarán los siguientes cambios:
+                <ul>
+                    <li>
+                        Se hará zoom en el área clickeada y se mostrarán las subáreas circulares que contiene. Si se desea revertir
+                        el último zoom realizado se puede hacer click en el área circular que contiene a la (sub)categoría clickeada. 
+                        En caso de clickear una de las subáreas más profundas se reestablecerá el zoom a su estado inicial para mostrar
+                        todas las áreas circulares nuevamente.
+                    </li>
+                    <li>
+                        Se actualizarán las opciones de los selectores de años ubicados más abajo según los años en los que se lanzaron
+                        los animes de la (sub)categoría seleccionada.
+                    </li>
+                    <li>
+                        Se mostrará el nombre de la (sub)categoría seleccionada en la leyenda de la siguiente visualización.
+                    </li>
+                    <li>
+                        Se actualizará el gráfico de dispersión de la siguiente visualización con los datos de la (sub)categoría
+                        seleccionada.
+                    </li>
+                </ul>
+            </ul>
+        </ul>
+        <div id="circular-packing-chart"></div>
+        <div class="divLine"></div>
+        <br>
+        <br>
+        <h2>Visualización 2 - Puntuaciones de los animes pertenecientes a la categoría seleccionada</h2>
+        <br>
+        <ul class="legend textStart">
+            <li>
+                La siguiente visualización busca mostrar las puntuaciones de los animes pertenecientes a la (sub)categoría seleccionada
+                en la visualización anterior en función de su fecha de lanzamiento.
+            </li>
+            <li>
+                Cada punto en el gráfico de dispersión representa un anime, donde el eje X representa el año de lanzamiento del
+                anime y el eje Y representa la puntuación del anime en MyAnimeList. Esto implica que un anime con un puntaje más
+                alto estará ubicado más arriba en el gráfico de dispersión, mientras que un anime con una fecha de lanzamiento más
+                reciente estará ubicado más a la derecha. Por otro lado, el color de cada punto no tiene un significado en particular.
+            </li>
+            <li>
+                En la parte superior de la visualización se encuentran dos selectores de años, uno para seleccionar el año inicial
+                y otro para seleccionar el año final. Estos selectores permiten establecer un rango de años para filtrar los animes
+                que pertenecen a la (sub)categoría seleccionada y que fueron lanzados en ese rango de años. Si se ingresa un año de inicio
+                mayor a un año de término no se realizará ningún cambio ni filtro.
+            </li>
+            <li>
+                Es posible hacer zoom en el gráfico de dispersión al girar la rueda del mouse sobre él, lo que permite visualizar
+                los puntos con mayor detalle. Cabe destacar que este zoom solo afecta al eje vertical del gráfico de dispersión, si se desea
+                modificar el eje horizontal se deben utilizar los selectores de años. También es posible desplazarse verticalmente por
+                el gráfico al mantener presionado el click sobre él y mover el mouse.
+            </li>
+            <li>
+                Además, al pasar el mouse sobre un punto se mostrará un tooltip que contiene distintos datos acerca su anime asociado, como su
+                nombre, su puntuación y su fecha de lanzamiento.
+            </li>
+        </ul>
+
+        <div id="selectors">
+            <h5>Seleccione año inicial</h5>
+            <select id="start-year-selector" class="year-selector"></select>
+            <h5>Seleccione año final</h5>
+            <select id="end-year-selector" class="year-selector"></select>
+        </div>
+        <h5 id="scatter-plot-title">(Sub)Categoría seleccionada:</h2>
+        <div id="scatter-plot"></div>
+        <br>
+        <br>
+        <div class="divLine"></div>
+        <h2>Referencias de código:</h2>
+        <ul class="refs">
+            <li>
+                Para la creación del circular packing de la primera visualización se adaptó el código mostrado en el siguiente enlace:
+                <a href="https://observablehq.com/@d3/zoomable-circle-packing">https://observablehq.com/@d3/zoomable-circle-packing</a>
+            </li>
+            <li>
+                Para la transformación del dataset <a href="https://docs.google.com/spreadsheets/d/1xVkSsB-vnh1GX7Tn7nUjiuI1h990N8KGRvCrTWvRyNQ/edit#gid=1023424596">myanimelist.csv</a>
+                a una jerarquía se utilizó una función hecha con ayuda de Chat-GPT.
+            </li>
+            <li>
+                Para la creación del gráfico de dispersión de la segunda visualización se adaptó el código mostrado en la ayudantía 7 - visualización número 2.
+            </li>
+            <li>
+                Tooltip de los animes basado en <a href="https://hernan4444.github.io/iic2026/otros/barchart-with-piechart/main.js">este ejemplo</a>
+            </li>
+        </ul>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
+
+<!-- Referencias:
+- Circular Packing: https://observablehq.com/@d3/zoomable-circle-packing
+- Transformación del dataset a una jerarquía hecha con ayuda de Chat-GPT
+- Scatter Plot: Ayudantía 7 - Visualización número 2 
+- Tooltip del profesor -->

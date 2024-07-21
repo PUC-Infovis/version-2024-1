@@ -1,0 +1,67 @@
+body {
+    background-color: #d4e9e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bar-legend-label {
+    text-anchor: middle;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.container-wrapper {
+    display: flex;
+    height: auto;
+    width: 100%;
+}
+
+.container {
+    flex: 1;
+    margin: 10px;
+    position: relative;
+}
+.chart-title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+#bubble-chart {
+    width: 100%;
+    height: 800px;
+}
+#bar-chart {
+    width: 100%;
+    height: 800px;
+}
+
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 5px;
+    background: lightsteelblue;
+    border: 1px solid #000;
+    border-radius: 5px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+}

@@ -1,0 +1,258 @@
+:root {
+    --footer-bg-color: #042848;
+    --subtitle-bg-color: #08346e;
+    --link-color: rgb(0, 217, 247);
+    --bg-color: #f2f3f4;
+    --text-color: #fdfefe;
+    --title-bg-color: #091118f4;
+    --navbar-bg-color: #005eb4;
+}
+
+/* ------------------------------- GENERAL ---------------------------------- */
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* Desactivar en el caso que moleste al deslizar :p */
+    /* scroll-snap-type: y proximity; */
+}
+
+body {
+    font-family:    system-ui, -apple-system, BlinkMacSystemFont, 
+                    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+                    'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color)
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10rem;
+}
+
+header {
+    margin-top: 0;
+}
+
+article {
+    border-radius: .5rem;
+    border: 1px solid rgba(0, 0, 0, .2);
+    background-color: var(--text-color);
+    margin: 4rem auto;
+    padding: .5rem;
+    max-width: 97vw;
+}
+
+section {
+    background-color: white;
+}
+
+h1, h2, h3, h4, h4, h5 {
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
+}
+
+p a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+select, button {
+    background-color: #fff;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 1px solid rgba(12, 42, 122, 0.2);
+    transition: all ease-in-out 0.1s;
+    cursor: pointer;
+}
+
+select:hover, button:hover {
+    background-color:rgba(12, 42, 122, 0.8);
+    border: 1px solid rgba(12, 42, 122, 0.8);
+    color: white;
+}
+
+/* ------------------------------- NAVIGATION ------------------------------- */
+.navbar {
+    position: sticky;
+    background-color: var(--navbar-bg-color);
+    padding: .3rem 0;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    justify-content: flex-end;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.navbar ul li a:hover {
+    color: var(--link-color);
+}
+
+#title, #contexto, #detalles-generales, #visualizaciones {
+    scroll-snap-align: start;
+}
+
+/* ------------------------------- HEADER ----------------------------------- */
+
+#title, #subtitle, #visualizaciones {
+    text-align: center;
+}
+
+#title {
+    scroll-snap-align: center;
+    background: url(https://thebutlercollegian.com/wp-content/uploads/2021/09/Screen-Shot-2021-09-28-at-9.59.39-PM.png) 
+                no-repeat top center/cover fixed;
+    background-blend-mode: soft-light;
+    background-color: var(--title-bg-color);
+    color: var(--text-color);
+    font-size: 4rem;
+    padding: 7rem 0 5rem 0;
+    margin: 0;
+    width: 100vw;
+    font-weight: 500;
+}
+
+#subtitle {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    background-color: var(--subtitle-bg-color);  
+    padding: 1rem 0;
+    margin: 0;
+    border-radius: .5rem .5rem 0rem 0rem;
+}
+
+#subsubtitle {
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 400;
+    padding: 0;
+    margin: 0.5rem;
+}
+
+
+.description {
+    margin: 1rem;
+    padding: .5rem;
+    max-width: 90%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.description-title {
+    text-align: left;
+    font-size: 1.3rem;
+}
+
+.description p {
+    text-align: justify;
+    
+}   
+/* ----------------------------- TEXT STYLE --------------------------------- */
+.english {
+    font-style: italic;
+}
+.bolder {
+    font-weight: 600;
+    color: #38566b
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+
+/* --------------------------- VISUALIZATION -------------------------------- */
+
+.visualization {
+    max-width: 100vw;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: .5rem;
+    margin: 2rem auto;
+    padding: .5rem;
+}
+
+.team-victories {
+    background-color: #ffffffa4;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+    border-radius: .5rem;
+    position: absolute;
+    padding: 1rem;
+    overflow: scroll;
+}
+
+.team-victories p {
+    text-align: left;
+}
+
+.team-victories ul {
+    list-style: none;
+}
+
+.team-victories ul li {
+    display: flex;
+    justify-content: space-between;
+    margin: .5rem 0;
+    transform: translateX(-40px)
+}
+
+.hline {
+    border-top: 1px solid rgba(0, 0, 0, .2);
+}
+
+/* EACH Visualization */
+#section-vis-2 {
+    max-width: 55vw;
+}
+#section-vis-3  {
+    max-width: 40vw;
+}
+#section-vis-1, #section-vis-2, #section-vis-3 {
+    margin: 1rem;
+}
+
+.visualization #description {
+    text-align: center;
+    margin: 0 auto;
+}
+.visualization ul {
+    text-align: left;
+}
+
+/* ------------------------------- FOOTER ----------------------------------- */
+
+footer {
+    background-color: var(--footer-bg-color);
+    transform: translateY(30vh);
+    color: white;
+    height: 10vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

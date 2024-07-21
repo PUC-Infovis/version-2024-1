@@ -1,0 +1,46 @@
+.tooltip {
+  color: #333;
+  font-size: 12px;
+  }
+
+
+
+
+
+
+#lobby {
+  font-family: Arial, sans-serif;
+  display: grid;
+  justify-items: center;
+}
+
+  #contenedor-total {
+    display: flex;
+    flex-direction: row;
+    font-family: Arial, sans-serif;
+  }
+  
+
+  
+
+
+  #prueba-select {
+    width: 200px;
+    padding: 5px;
+    margin: 10px 0;
+  }
+  
+
+
+  #contenedor-texto {
+    width: 90%;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 10px;
+  }
+
+  #contenedor-texto p {
+    margin: 10px 0;
+  }
+  
+  

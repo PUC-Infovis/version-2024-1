@@ -1,0 +1,91 @@
+body {
+    margin: 0 auto;
+    background-color: whitesmoke;
+    color: rgb(47, 47, 47);
+    max-width: 1200px;
+    min-width: 500px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+svg {
+    border: solid 4px white;
+}
+
+.divLine {
+    margin-top: 30px;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+}
+
+.textStart {
+    text-align: start;
+}
+
+.textStart li {
+    padding-top: 8px;
+}
+
+.textStart.legend span {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(0, 0, 0);
+    display: inline-block;
+}
+
+
+.introduccion {
+    text-align: justify;
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: solid 4px white;
+}
+
+#Taylor_Swift {
+    background-color: #BDCFB7;
+}
+
+#Fearless_TV {
+    background-color: #E8C490;
+}
+
+#Speak_Now_TV {
+    background-color: #BEA7C4;
+}
+
+#Red_TV {
+    background-color: #6D3D46;
+}
+
+#Nineteen_Ninety_Nine_TV{
+    background-color: #C2E2F4;
+}
+
+#Reputation {
+    background-color: #000003;
+}
+
+#Lover {
+    background-color: #EAB4CC;
+}
+
+#Folklore {
+    background-color: #D1CEC7;
+}
+
+#Evermore {
+    background-color: #CC9D83;
+}
+
+#Midnights{
+    background-color: #464D60;
+}
+
+#Other {
+    background-color: silver;
+}
+

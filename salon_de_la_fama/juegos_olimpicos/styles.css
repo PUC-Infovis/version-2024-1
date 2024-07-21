@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8eb; /* color crema */
+    text-align: center;
+    position: relative;
+}
+
+.olympic-logo {
+    width: 100%;
+    height: auto;
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000000;
+    color: #f8f8eb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10%;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.visualization-container {
+    padding: 20px;
+    background-color:#f8f8eb;
+    text-align: center;
+}
+
+
+svg {
+    width: 100%;
+    height: auto;
+}
+
+#filters-container {
+    margin-top: 20px;
+    display: none;
+}
+
+
+
+h1 {
+    text-align: center;
+}
+
+
+#bar-chart-container {
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+#map-container {
+    margin: 20px auto;
+    max-width: 900px;
+    position: relative;
+}
+
+#legend-container {
+    margin: 20px auto;
+    text-align: center;
+    max-width: 900px;
+}
+
+.legend-item {
+    display: inline-block;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 5px;
+    font: 12px sans-serif;
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    pointer-events: none;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+}
+
+#reset-button {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer
+}
