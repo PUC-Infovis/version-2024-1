@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v4.min.js"></script>
+    <title>Proyecto Entrega 2</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Proyecto Entrega 2 - Visualizaciones Ataques Piratas</h1>
+        <button id="sound">ON Music 🎵</button>
+
+        <h4>Descripción del tema</h4>
+            
+        <p>El transporte marítimo es de vital importancia en el mundo globalizado ya que 
+        <a href="https://unctad.org/meeting/launch-review-maritime-transport-2023">más del 80%</a> del volumen de los bienes
+        del comercio internacional son transportado por esta vía. Las disrupciones de este significan un gran costo económico, 
+        por lo que fenómenos como <a href="https://iccwbo.org/news-publications/news/new-imb-report-reveals-concerning-rise-in-maritime-piracy-incidents-in-2023/">la piratería</a> 
+        cobran una gran relevancia y suponen un desafió para la gobernanza global.</p>
+            
+        <p>El dataset a trabajar presenta información acerca de ataques piratas entre los años 1993 y 2020. Algunos de las datos
+        que contiene son fecha, longitud, latitud, tipo de ataque y país más cercano. Dado el contexto anteriormente 
+        descrito este dataset es de vital importancia para abordar el tema de la piratería.</p>
+            
+        <h4>Fuente original de los datos</h4>
+                
+        <p>El dataset fue obtenido de Kaggle y se encuentra disponible 
+        <a href="https://www.kaggle.com/datasets/n0n5ense/global-maritime-pirate-attacks-19932020?select=pirate_attacks.csv" >aquí.</a></p>
+
+        <h2>Visualización 1 - Distribución geográfica ataques piratas</h2>
+        <ul class="legend textStart">
+            <li>
+                Cada <span class="dot" id="ataquePirata"></span> representa un ataque pirata.
+            </li>
+            <li>
+                La visualización permite zoom y panning.
+            </li>
+            <li>
+                Tiene vista coordinada con la visualización dos.
+            </li>
+        </ul>
+
+        <div id="vis-1">
+        </div>
+
+        <div class="divLine"></div>
+        <h2>Visualización 2 - Serie de tiempo ataques piratas por año</h2>
+        <div>
+            <h5>1. Seleccionar región</h5>
+            <select id="region">
+                <option value="All Regions" selected>All Regions</option>
+                <option value="East Asia & Pacific">East Asia & Pacific</option>
+                <option value="Europe & Central Asia">Europe & Central Asia</option>
+                <option value="Latin America & Caribbean">Latin America & Caribbean</option>
+                <option value="Middle East & North Africa">Middle East & North Africa</option>
+                <option value="North America">North America</option>
+                <option value="South Asia">South Asia</option>
+                <option value="Sub-Saharan Africa">Sub-Saharan Africa</option>
+            </select>
+        </div>
+        
+        <ul class="legend textStart">
+            <li>
+                Cada <span id="frecuenciaPirata"></span> representa el número de ataques piratas que ocurrió ese año. Eje Y: número de ataques piratas. Eje X: años. 
+            </li>
+            <li>
+                La visualización permite brush, si <span id="frecuenciaPirata"></span> cambia a <span id="frecuenciaPirataSeleccionada"></span> indica que el año fue seleccionado.
+            </li>
+            <li>
+                El selector permite seleccionar una región filtrando los ataques.
+            </li>
+            <li>
+                Tiene vista coordinada con la visualización uno.
+            </li>
+        </ul>
+
+        <div id="vis-2">
+            <h4 id="selected"></h4>
+        </div>
+
+        <h3> Referencias </h3>
+        <p>Códigos del profesor como los 
+        <cite><a href="https://github.com/PUC-Infovis/Syllabus-2024-1/tree/main/Codigos">ejemplos de clases</a></cite>
+         y las <cite><a href="https://github.com/PUC-Infovis/Syllabus-2024-1/tree/main/Ayudantias">ayudantías.</a></cite></p> 
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

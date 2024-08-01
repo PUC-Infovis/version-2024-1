@@ -1,0 +1,797 @@
+{
+    "nodes": [
+        {
+            "id": "Beasts Pirates",
+            "count": 50
+        },
+        {
+            "id": "Mokomo Dukedom",
+            "count": 14
+        },
+        {
+            "id": "Straw Hat Grand Fleet",
+            "count": 37
+        },
+        {
+            "id": "Red Hair Pirates",
+            "count": 16
+        },
+        {
+            "id": "Whitebeard Pirates",
+            "count": 36
+        },
+        {
+            "id": "Straw Hat Pirates",
+            "count": 13
+        },
+        {
+            "id": "Roger Pirates",
+            "count": 23
+        },
+        {
+            "id": "Ninja-Pirate-Mink-Samurai Alliance",
+            "count": 22
+        },
+        {
+            "id": "Marines",
+            "count": 68
+        },
+        {
+            "id": "Kid Pirates",
+            "count": 21
+        },
+        {
+            "id": "Thriller Bark Pirates",
+            "count": 14
+        },
+        {
+            "id": "Blackbeard Pirates",
+            "count": 17
+        },
+        {
+            "id": "Donquixote Pirates",
+            "count": 15
+        },
+        {
+            "id": "Revolutionary Army",
+            "count": 14
+        },
+        {
+            "id": "Kozuki Family",
+            "count": 30
+        },
+        {
+            "id": "Big Mom Pirates",
+            "count": 85
+        },
+        {
+            "id": "Kuja",
+            "count": 19
+        },
+        {
+            "id": "CP0",
+            "count": 13
+        },
+        {
+            "id": "World Government",
+            "count": 15
+        },
+        {
+            "id": "Baroque Works",
+            "count": 16
+        }
+    ],
+    "links": [
+        {
+            "source": "Beasts Pirates",
+            "target": "Mokomo Dukedom",
+            "value": 3
+        },
+        {
+            "source": "Beasts Pirates",
+            "target": "Straw Hat Grand Fleet",
+            "value": 3
+        },
+        {
+            "source": "Beasts Pirates",
+            "target": "Red Hair Pirates",
+            "value": 3
+        },
+        {
+            "source": "Beasts Pirates",
+            "target": "Whitebeard Pirates",
+            "value": 3
+        },
+        {
+            "source": "Beasts Pirates",
+            "target": "Straw Hat Pirates",
+            "value": 3
+        },
+        {
+            "source": "Beasts Pirates",
+            "target": "Ninja-Pirate-Mink-Samurai Alliance",
+            "value": 3
+        },
+        {
+            "source": "Beasts Pirates",
+            "target": "Marines",
+            "value": 3
+        },
+        {
+            "source": "Beasts Pirates",
+            "target": "Kid Pirates",
+            "value": 3
+        },
+        {
+            "source": "Beasts Pirates",
+            "target": "Thriller Bark Pirates",
+            "value": 3
+        },
+        {
+            "source": "Beasts Pirates",
+            "target": "Blackbeard Pirates",
+            "value": 3
+        },
+        {
+            "source": "Beasts Pirates",
+            "target": "Donquixote Pirates",
+            "value": 1
+        },
+        {
+            "source": "Beasts Pirates",
+            "target": "Revolutionary Army",
+            "value": 3
+        },
+        {
+            "source": "Beasts Pirates",
+            "target": "Kozuki Family",
+            "value": 3
+        },
+        {
+            "source": "Beasts Pirates",
+            "target": "Big Mom Pirates",
+            "value": 1
+        },
+        {
+            "source": "Beasts Pirates",
+            "target": "Kuja",
+            "value": 3
+        },
+        {
+            "source": "Beasts Pirates",
+            "target": "CP0",
+            "value": 1
+        },
+        {
+            "source": "Beasts Pirates",
+            "target": "World Government",
+            "value": 3
+        },
+        {
+            "source": "Mokomo Dukedom",
+            "target": "Straw Hat Grand Fleet",
+            "value": 1
+        },
+        {
+            "source": "Mokomo Dukedom",
+            "target": "Straw Hat Pirates",
+            "value": 1
+        },
+        {
+            "source": "Mokomo Dukedom",
+            "target": "Roger Pirates",
+            "value": 1
+        },
+        {
+            "source": "Mokomo Dukedom",
+            "target": "Ninja-Pirate-Mink-Samurai Alliance",
+            "value": 1
+        },
+        {
+            "source": "Mokomo Dukedom",
+            "target": "Marines",
+            "value": 2
+        },
+        {
+            "source": "Mokomo Dukedom",
+            "target": "Kid Pirates",
+            "value": 2
+        },
+        {
+            "source": "Mokomo Dukedom",
+            "target": "Blackbeard Pirates",
+            "value": 2
+        },
+        {
+            "source": "Mokomo Dukedom",
+            "target": "Donquixote Pirates",
+            "value": 3
+        },
+        {
+            "source": "Mokomo Dukedom",
+            "target": "Kozuki Family",
+            "value": 1
+        },
+        {
+            "source": "Mokomo Dukedom",
+            "target": "Big Mom Pirates",
+            "value": 3
+        },
+        {
+            "source": "Mokomo Dukedom",
+            "target": "CP0",
+            "value": 3
+        },
+        {
+            "source": "Mokomo Dukedom",
+            "target": "World Government",
+            "value": 2
+        },
+        {
+            "source": "Straw Hat Grand Fleet",
+            "target": "Red Hair Pirates",
+            "value": 2
+        },
+        {
+            "source": "Straw Hat Grand Fleet",
+            "target": "Whitebeard Pirates",
+            "value": 2
+        },
+        {
+            "source": "Straw Hat Grand Fleet",
+            "target": "Straw Hat Pirates",
+            "value": 1
+        },
+        {
+            "source": "Straw Hat Grand Fleet",
+            "target": "Ninja-Pirate-Mink-Samurai Alliance",
+            "value": 1
+        },
+        {
+            "source": "Straw Hat Grand Fleet",
+            "target": "Marines",
+            "value": 3
+        },
+        {
+            "source": "Straw Hat Grand Fleet",
+            "target": "Kid Pirates",
+            "value": 1
+        },
+        {
+            "source": "Straw Hat Grand Fleet",
+            "target": "Thriller Bark Pirates",
+            "value": 3
+        },
+        {
+            "source": "Straw Hat Grand Fleet",
+            "target": "Blackbeard Pirates",
+            "value": 3
+        },
+        {
+            "source": "Straw Hat Grand Fleet",
+            "target": "Donquixote Pirates",
+            "value": 3
+        },
+        {
+            "source": "Straw Hat Grand Fleet",
+            "target": "Revolutionary Army",
+            "value": 1
+        },
+        {
+            "source": "Straw Hat Grand Fleet",
+            "target": "Kozuki Family",
+            "value": 1
+        },
+        {
+            "source": "Straw Hat Grand Fleet",
+            "target": "Big Mom Pirates",
+            "value": 3
+        },
+        {
+            "source": "Straw Hat Grand Fleet",
+            "target": "Kuja",
+            "value": 1
+        },
+        {
+            "source": "Straw Hat Grand Fleet",
+            "target": "CP0",
+            "value": 3
+        },
+        {
+            "source": "Straw Hat Grand Fleet",
+            "target": "World Government",
+            "value": 3
+        },
+        {
+            "source": "Straw Hat Grand Fleet",
+            "target": "Baroque Works",
+            "value": 3
+        },
+        {
+            "source": "Red Hair Pirates",
+            "target": "Whitebeard Pirates",
+            "value": 2
+        },
+        {
+            "source": "Red Hair Pirates",
+            "target": "Straw Hat Pirates",
+            "value": 2
+        },
+        {
+            "source": "Red Hair Pirates",
+            "target": "Roger Pirates",
+            "value": 2
+        },
+        {
+            "source": "Red Hair Pirates",
+            "target": "Ninja-Pirate-Mink-Samurai Alliance",
+            "value": 2
+        },
+        {
+            "source": "Red Hair Pirates",
+            "target": "Marines",
+            "value": 3
+        },
+        {
+            "source": "Red Hair Pirates",
+            "target": "Kid Pirates",
+            "value": 3
+        },
+        {
+            "source": "Red Hair Pirates",
+            "target": "Thriller Bark Pirates",
+            "value": 3
+        },
+        {
+            "source": "Red Hair Pirates",
+            "target": "Blackbeard Pirates",
+            "value": 3
+        },
+        {
+            "source": "Red Hair Pirates",
+            "target": "Donquixote Pirates",
+            "value": 3
+        },
+        {
+            "source": "Red Hair Pirates",
+            "target": "Revolutionary Army",
+            "value": 2
+        },
+        {
+            "source": "Red Hair Pirates",
+            "target": "Kozuki Family",
+            "value": 2
+        },
+        {
+            "source": "Red Hair Pirates",
+            "target": "Big Mom Pirates",
+            "value": 3
+        },
+        {
+            "source": "Red Hair Pirates",
+            "target": "World Government",
+            "value": 2
+        },
+        {
+            "source": "Whitebeard Pirates",
+            "target": "Straw Hat Pirates",
+            "value": 2
+        },
+        {
+            "source": "Whitebeard Pirates",
+            "target": "Roger Pirates",
+            "value": 2
+        },
+        {
+            "source": "Whitebeard Pirates",
+            "target": "Ninja-Pirate-Mink-Samurai Alliance",
+            "value": 1
+        },
+        {
+            "source": "Whitebeard Pirates",
+            "target": "Marines",
+            "value": 3
+        },
+        {
+            "source": "Whitebeard Pirates",
+            "target": "Thriller Bark Pirates",
+            "value": 3
+        },
+        {
+            "source": "Whitebeard Pirates",
+            "target": "Blackbeard Pirates",
+            "value": 3
+        },
+        {
+            "source": "Whitebeard Pirates",
+            "target": "Donquixote Pirates",
+            "value": 3
+        },
+        {
+            "source": "Whitebeard Pirates",
+            "target": "Revolutionary Army",
+            "value": 2
+        },
+        {
+            "source": "Whitebeard Pirates",
+            "target": "Kozuki Family",
+            "value": 1
+        },
+        {
+            "source": "Whitebeard Pirates",
+            "target": "Big Mom Pirates",
+            "value": 3
+        },
+        {
+            "source": "Whitebeard Pirates",
+            "target": "CP0",
+            "value": 3
+        },
+        {
+            "source": "Whitebeard Pirates",
+            "target": "World Government",
+            "value": 3
+        },
+        {
+            "source": "Straw Hat Pirates",
+            "target": "Ninja-Pirate-Mink-Samurai Alliance",
+            "value": 1
+        },
+        {
+            "source": "Straw Hat Pirates",
+            "target": "Marines",
+            "value": 3
+        },
+        {
+            "source": "Straw Hat Pirates",
+            "target": "Kid Pirates",
+            "value": 1
+        },
+        {
+            "source": "Straw Hat Pirates",
+            "target": "Thriller Bark Pirates",
+            "value": 3
+        },
+        {
+            "source": "Straw Hat Pirates",
+            "target": "Blackbeard Pirates",
+            "value": 3
+        },
+        {
+            "source": "Straw Hat Pirates",
+            "target": "Donquixote Pirates",
+            "value": 3
+        },
+        {
+            "source": "Straw Hat Pirates",
+            "target": "Revolutionary Army",
+            "value": 1
+        },
+        {
+            "source": "Straw Hat Pirates",
+            "target": "Kozuki Family",
+            "value": 1
+        },
+        {
+            "source": "Straw Hat Pirates",
+            "target": "Big Mom Pirates",
+            "value": 3
+        },
+        {
+            "source": "Straw Hat Pirates",
+            "target": "Kuja",
+            "value": 1
+        },
+        {
+            "source": "Straw Hat Pirates",
+            "target": "CP0",
+            "value": 3
+        },
+        {
+            "source": "Straw Hat Pirates",
+            "target": "World Government",
+            "value": 3
+        },
+        {
+            "source": "Straw Hat Pirates",
+            "target": "Baroque Works",
+            "value": 3
+        },
+
+        {
+            "source": "Roger Pirates",
+            "target": "Ninja-Pirate-Mink-Samurai Alliance",
+            "value": 1
+        },
+        {
+            "source": "Roger Pirates",
+            "target": "Marines",
+            "value": 3
+        },
+        {
+            "source": "Roger Pirates",
+            "target": "Blackbeard Pirates",
+            "value": 2
+        },
+        {
+            "source": "Roger Pirates",
+            "target": "Kozuki Family",
+            "value": 1
+        },
+        {
+            "source": "Roger Pirates",
+            "target": "Big Mom Pirates",
+            "value": 3
+        },
+        {
+            "source": "Roger Pirates",
+            "target": "World Government",
+            "value": 3
+        },
+        {
+            "source": "Ninja-Pirate-Mink-Samurai Alliance",
+            "target": "Marines",
+            "value": 3
+        },
+        {
+            "source": "Ninja-Pirate-Mink-Samurai Alliance",
+            "target": "Kid Pirates",
+            "value": 1
+        },
+        {
+            "source": "Ninja-Pirate-Mink-Samurai Alliance",
+            "target": "Blackbeard Pirates",
+            "value": 3
+        },
+        {
+            "source": "Ninja-Pirate-Mink-Samurai Alliance",
+            "target": "Donquixote Pirates",
+            "value": 3
+        },
+        {
+            "source": "Ninja-Pirate-Mink-Samurai Alliance",
+            "target": "Revolutionary Army",
+            "value": 1
+        },
+        {
+            "source": "Ninja-Pirate-Mink-Samurai Alliance",
+            "target": "Kozuki Family",
+            "value": 1
+        },
+        {
+            "source": "Ninja-Pirate-Mink-Samurai Alliance",
+            "target": "Big Mom Pirates",
+            "value": 3
+        },
+        {
+            "source": "Ninja-Pirate-Mink-Samurai Alliance",
+            "target": "CP0",
+            "value": 3
+        },
+        {
+            "source": "Ninja-Pirate-Mink-Samurai Alliance",
+            "target": "World Government",
+            "value": 3
+        },
+        {
+            "source": "Marines",
+            "target": "Kid Pirates",
+            "value": 3
+        },
+        {
+            "source": "Marines",
+            "target": "Thriller Bark Pirates",
+            "value": 3
+        },
+        {
+            "source": "Marines",
+            "target": "Blackbeard Pirates",
+            "value": 3
+        },
+        {
+            "source": "Marines",
+            "target": "Donquixote Pirates",
+            "value": 3
+        },
+        {
+            "source": "Marines",
+            "target": "Revolutionary Army",
+            "value": 3
+        },
+        {
+            "source": "Marines",
+            "target": "Kozuki Family",
+            "value": 2
+        },
+        {
+            "source": "Marines",
+            "target": "Big Mom Pirates",
+            "value": 3
+        },
+        {
+            "source": "Marines",
+            "target": "Kuja",
+            "value": 3
+        },
+        {
+            "source": "Marines",
+            "target": "CP0",
+            "value": 1
+        },
+        {
+            "source": "Marines",
+            "target": "World Government",
+            "value": 1
+        },
+        {
+            "source": "Marines",
+            "target": "Baroque Works",
+            "value": 3
+        },
+        {
+            "source": "Kid Pirates",
+            "target": "Blackbeard Pirates",
+            "value": 3
+        },
+        {
+            "source": "Kid Pirates",
+            "target": "Donquixote Pirates",
+            "value": 3
+        },
+        {
+            "source": "Kid Pirates",
+            "target": "Revolutionary Army",
+            "value": 2
+        },
+        {
+            "source": "Kid Pirates",
+            "target": "Kozuki Family",
+            "value": 2
+        },
+        {
+            "source": "Kid Pirates",
+            "target": "Big Mom Pirates",
+            "value": 3
+        },
+        {
+            "source": "Kid Pirates",
+            "target": "CP0",
+            "value": 3
+        },
+        {
+            "source": "Kid Pirates",
+            "target": "World Government",
+            "value": 3
+        },
+        {
+            "source": "Thriller Bark Pirates",
+            "target": "CP0",
+            "value": 3
+        },
+        {
+            "source": "Thriller Bark Pirates",
+            "target": "World Government",
+            "value": 3
+        },
+        {
+            "source": "Blackbeard Pirates",
+            "target": "Donquixote Pirates",
+            "value": 3
+        },
+        {
+            "source": "Blackbeard Pirates",
+            "target": "Revolutionary Army",
+            "value": 3
+        },
+        {
+            "source": "Blackbeard Pirates",
+            "target": "Kozuki Family",
+            "value": 3
+        },
+        {
+            "source": "Blackbeard Pirates",
+            "target": "Big Mom Pirates",
+            "value": 3
+        },
+        {
+            "source": "Blackbeard Pirates",
+            "target": "Kuja",
+            "value": 3
+        },
+        {
+            "source": "Blackbeard Pirates",
+            "target": "CP0",
+            "value": 3
+        },
+        {
+            "source": "Blackbeard Pirates",
+            "target": "World Government",
+            "value": 3
+        },
+        {
+            "source": "Donquixote Pirates",
+            "target": "Revolutionary Army",
+            "value": 3
+        },
+        {
+            "source": "Donquixote Pirates",
+            "target": "Kozuki Family",
+            "value": 3
+        },
+        {
+            "source": "Donquixote Pirates",
+            "target": "CP0",
+            "value": 3
+        },
+        {
+            "source": "Donquixote Pirates",
+            "target": "World Government",
+            "value": 3
+        },
+        {
+            "source": "Revolutionary Army",
+            "target": "Kozuki Family",
+            "value": 2
+        },
+        {
+            "source": "Revolutionary Army",
+            "target": "Big Mom Pirates",
+            "value": 3
+        },
+        {
+            "source": "Revolutionary Army",
+            "target": "CP0",
+            "value": 3
+        },
+        {
+            "source": "Revolutionary Army",
+            "target": "World Government",
+            "value": 3
+        },
+        {
+            "source": "Kozuki Family",
+            "target": "Big Mom Pirates",
+            "value": 3
+        },
+        {
+            "source": "Kozuki Family",
+            "target": "CP0",
+            "value": 3
+        },
+        {
+            "source": "Kozuki Family",
+            "target": "World Government",
+            "value": 3
+        },
+        {
+            "source": "Big Mom Pirates",
+            "target": "CP0",
+            "value": 3
+        },
+        {
+            "source": "Big Mom Pirates",
+            "target": "World Government",
+            "value": 3
+        },
+        {
+            "source": "Kuja",
+            "target": "CP0",
+            "value": 3
+        },
+        {
+            "source": "Kuja",
+            "target": "World Government",
+            "value": 3
+        },
+        {
+            "source": "CP0",
+            "target": "World Government",
+            "value": 1
+        },
+        {
+            "source": "World Government",
+            "target": "Baroque Works",
+            "value": 3
+        }
+    ]
+}

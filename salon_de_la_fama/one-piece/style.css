@@ -1,0 +1,64 @@
+body {
+    margin: 0 auto;
+    /* Puedes cambiar el color de fondo (background-color) si lo deseas */
+    background-color: rgb(255, 255, 255);
+    max-width: 80%;
+    min-width: 500px;
+    text-align: center;
+    background-image: url("wp.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+    background-attachment: fixed;
+  
+    height: 300vh;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+
+.box {
+    text-align: start;
+    background-color: rgba(191, 205, 252, 0.9); /* Color blanco con 30% de opacidad */
+    border: solid gray 2px;
+    padding: 10px;
+    margin: 10px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#network-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#network {
+    flex: 1;
+}
+
+#leyenda {
+    flex: 0 0 350px;
+    font-size: 14px;
+}
+
+.recuadro {
+    text-align: center;
+    background-color: rgba(215, 220, 236, 0.92); /* Color blanco con 30% de opacidad */
+    border: solid gray 2px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 50px;
+    color: rgb(233, 229, 21);
+    text-shadow: 2px 2px 4px black;
+    padding: 10px; 
+    display: inline-block; 
+}
+
+.divLine {
+    padding: 20px;
+}

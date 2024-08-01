@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://cdn.icon-icons.com/icons2/1029/PNG/256/Luffys_flag_icon-icons.com_76118.png" type="image/x-icon">
+    <script src="https://d3js.org/d3.v7.js"></script>
+    
+    <title>One Piece Viz</title>
+</head>
+
+<body>
+    <div class="container">
+        
+        <h1>One Piece Visualización</h1>
+        <div class = 'recuadro'>
+        <h2>Visualización 1 - Heatmap</h2>
+        <h5>La primera Visualización corresponde a un mapa de calor de los episodios del anime de One Piece, organizados por arco. Tenemos un filtro que nos permite
+            ver los episodios que son 100% canon de los que poseen relleno. </h4>
+        <div>
+            <label for="tipo-episodio">Selecciona tipo de episodio:</label>
+            <select id="tipo-episodio">
+                <option value="both">Ambos</option>
+                <option value="canon">Canon</option>
+                <option value="mixed">Mixed Canon/Filler</option>
+            </select>
+        </div>
+
+
+        <div id="heatmap"></div>
+
+        </div>
+        <div class="divLine"></div>
+
+        <div class="recuadro">
+        <h2>Visualización 2 - Redes</h2>
+         <h5>Podemos ver un gráfico de redes en donde tenemos las 20 organizaciones más importantes del mundo de One Piece. Podemos ver como se relacionan entre si
+            mediante un enlace que indica si son Aliados , Enemigos o Neutrales. Además, mediante la herramienta de Brush mostraremos los capitulos en donde al menos
+            un integrante de esa organización debutó.
+         </h5>   
+        <div id="network-container">
+            <div id="network"></div>
+            <svg id="leyenda"></svg>
+        </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="configuration.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script type="module" src="datos.js"></script>
+</body>
+
+</html>
