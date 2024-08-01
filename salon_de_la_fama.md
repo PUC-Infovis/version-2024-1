@@ -34,6 +34,17 @@ Por Jean Carlo Rodriguez Maydana
 
 <div class="rol-card" markdown="1">
 
+### Ataque Pirata
+
+Por Gabriel Ignacio Catalán González
+
+[Enlace a visualización](https://puc-infovis.github.io/version-2024-1/salon_de_la_fama/ataque_pirata/)
+
+</div>
+
+
+<div class="rol-card" markdown="1">
+
 ### Atletismo olímpico femenino de medio fondo y fondo
 
 Por Antonia Contreras Klock
@@ -105,6 +116,14 @@ Por René Saavedra Vargas
 Por Krishel Diamel Centellas Calderón
 
 [Enlace a visualización](https://puc-infovis.github.io/version-2024-1/salon_de_la_fama/myanimelist/)
+
+</div>
+
+<div class="rol-card" markdown="1">
+
+### One Piece
+
+[Enlace a visualización](https://puc-infovis.github.io/version-2024-1/salon_de_la_fama/one-piece/)
 
 </div>
 
